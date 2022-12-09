@@ -1,4 +1,4 @@
-package puissance_4;
+package Affichage;
 
 public class SystemInfo {
 
