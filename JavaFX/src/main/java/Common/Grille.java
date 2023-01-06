@@ -1,5 +1,9 @@
 package Common;
 
+import java.io.IOException;
+import java.io.OutputStream;
+import java.net.Socket;
+
 public class Grille {
     private int[][] grille;
     private int nbLig;
@@ -96,6 +100,44 @@ public class Grille {
 
     public int getCase(int lig, int col) {
         return grille[lig][col];
+    }
+
+    public String toString(){
+        String s = "";
+        for (int i = 0; i < nbLig; i++) {
+            for (int j = 0; j < nbCol; j++) {
+                s += grille[i][j] + " ";
+            }
+            s += "\n";
+        }
+        return s;
+    }
+
+    public void setGrille(String s){
+        String[] lignes = s.split("\n");
+        for (int i = 0; i < lignes.length; i++) {
+            String[] cases = lignes[i].split(" ");
+            for (int j = 0; j < cases.length; j++) {
+                grille[i][j] = Integer.parseInt(cases[j]);
+            }
+        }
+    }
+
+    public void transmettreGrille(Socket[] clients) throws IOException {
+        String grilleString = this.toString();
+        byte[] gridBytes = grilleString.getBytes();
+
+        for (Socket client : clients) {
+            OutputStream out = client.getOutputStream();
+            out.write(gridBytes);
+        }
+    }
+
+    public void recevoirGrille(Socket client) throws IOException {
+        byte[] gridBytes = new byte[1024];
+        client.getInputStream().read(gridBytes);
+        String grilleString = new String(gridBytes);
+        this.setGrille(grilleString);
     }
 
 }
