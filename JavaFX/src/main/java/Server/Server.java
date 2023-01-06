@@ -1,5 +1,6 @@
 package Server;
 
+import java.net.Socket;
 import java.util.List;
 
 import Common.Message;
@@ -41,6 +42,10 @@ public class Server {
 		discClient.closeClient();
 		clients.remove(discClient);
 		broadcastMessage(new Message("Server",discClient.getId()+" vient de se déconnecter"), discClient.getId());
+	}
+
+	public Socket getSocket(int num) {
+		return clients.get(num).getSocket();
 	}
 	
 }

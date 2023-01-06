@@ -79,6 +79,9 @@ public class ConnectedClient implements Runnable{
 		this.out.close();
 		this.socket.close();
 	}
-	
+
+	public Socket getSocket() {
+		return this.socket;
+	}
 	
 }

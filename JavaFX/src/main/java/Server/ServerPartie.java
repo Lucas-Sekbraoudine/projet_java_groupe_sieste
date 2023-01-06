@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.net.Socket;
 import java.util.Random;
 
-public class ServerPartie {
+public class ServerPartie implements Runnable{
     private Grille grille;
     private int joueurCourant;
     private Socket[] clients;
@@ -19,10 +19,6 @@ public class ServerPartie {
         } else {
             this.clients = clients;
         }
-        //TODO: créer un thread pour chaque client et envoyer le message
-        //TODO: créer un thread pour le chat
-        demarrerPartie();
-        //TODO: Arreter tout les threads
     }
 
 
@@ -61,6 +57,14 @@ public class ServerPartie {
             //TODO: mettre a jour la base de données (defaite et victoire)
         } else {
             System.out.println("Match nul");
+        }
+    }
+    @Override
+    public void run() {
+        try {
+            demarrerPartie();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }
