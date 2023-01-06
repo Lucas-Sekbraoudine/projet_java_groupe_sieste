@@ -139,5 +139,12 @@ public class Grille {
         String grilleString = new String(gridBytes);
         this.setGrille(grilleString);
     }
+    
+    public void initNumeroJoueur(Socket[] clients) throws IOException {
+        for (int i = 0; i < clients.length; i++) {
+            OutputStream out = clients[i].getOutputStream();
+            out.write(i+1);
+        }
+    }
 
 }
