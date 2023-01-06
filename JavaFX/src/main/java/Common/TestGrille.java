@@ -1,4 +1,4 @@
-package Server;
+package Common;
 
 import Common.Grille;
 
