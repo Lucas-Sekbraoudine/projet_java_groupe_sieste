@@ -90,13 +90,17 @@ public class Grille {
         }
     }
 
-    public void jouer(int joueur, int colonne) {
+    public boolean jouer(int joueur, int colonne) {
+        if(colonne < 0 || colonne >= nbLig) {
+            return false;
+        }
         for(int i = nbCol - 1; i >= 0; i--) {
             if(grille[colonne][i] == 0) {
                 grille[colonne][i] = joueur;
-                break;
+                return true;
             }
         }
+        return false;
     }
 
 
