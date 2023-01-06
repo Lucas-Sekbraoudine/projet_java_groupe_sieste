@@ -156,6 +156,10 @@ public class Grille {
         }
     }
 
+    public int recevoirNumeroJoueur(Socket client) throws IOException {
+        return client.getInputStream().read();
+    }
+
     public void setJoueurCourant(int joueur){
         this.joueurCourant = joueur;
     }
@@ -174,4 +178,11 @@ public class Grille {
         serveur.getOutputStream().write(colonneBytes);
     }
 
+    public int getJoueurCourant(){
+        return joueurCourant;
+    }
+
+    public boolean isEnd(){
+        return isEnd;
+    }
 }

@@ -9,7 +9,6 @@ import java.util.Random;
 public class ServerPartie {
     private Grille grille;
     private int joueurCourant;
-
     private Socket[] clients;
 
     public ServerPartie(Socket[] clients) throws IOException {
