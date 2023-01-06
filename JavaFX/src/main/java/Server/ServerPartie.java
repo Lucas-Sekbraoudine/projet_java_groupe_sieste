@@ -12,14 +12,17 @@ public class ServerPartie {
 
     private Socket[] clients;
 
-    public ServerPartie(Socket[] clients) {
+    public ServerPartie(Socket[] clients) throws IOException {
+        // Vérifiez que les sockets sont valides et que vous avez bien reçu deux clients
         if (clients.length != 2 || clients[0] == null || clients[1] == null) {
             System.out.println("Erreur : nécessite deux clients valides pour démarrer la partie.");
             return;
+        } else {
+            this.clients = clients;
         }
         //TODO: créer un thread pour chaque client et envoyer le message
         //TODO: créer un thread pour le chat
-        //TODO: demarrer partie
+        demarrerPartie();
         //TODO: Arreter tout les threads
     }
 
@@ -44,8 +47,6 @@ public class ServerPartie {
     }
 
     public void demarrerPartie() throws IOException {
-        // Vérifiez que les sockets sont valides et que vous avez bien reçu deux clients
-
         // Créez une grille
         grille = new Grille();
         //Envoie leurs numéros aux joueurs
