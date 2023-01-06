@@ -1,5 +1,7 @@
 package Server;
 
+import Common.Grille;
+
 public class TestGrille {
 
     public static void main(String[] args) {

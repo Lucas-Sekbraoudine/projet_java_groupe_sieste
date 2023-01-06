@@ -1,5 +1,7 @@
 package Server;
 
+import Common.Grille;
+
 import java.util.Random;
 
 public class ServerPartie {
