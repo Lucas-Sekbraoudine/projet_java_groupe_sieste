@@ -9,6 +9,10 @@ public class Grille {
     private int nbLig;
     private int nbCol;
 
+    private boolean isEnd = false;
+
+    private int joueurCourant;
+
     public Grille() {
         //Taille de la grille de puissance 4: 6*7
         this.nbLig = 6;
@@ -38,6 +42,9 @@ public class Grille {
         for (int i = nbLig - 1; i >= 0; i--) {
             if (grille[i][colonne] == 0) {
                 grille[i][colonne] = joueur;
+                if (isWin(joueur) || isFull()) {
+                    isEnd = true;
+                }
                 return true;
             }
         }
@@ -110,17 +117,19 @@ public class Grille {
             }
             s += "\n";
         }
+        s += joueurCourant;
         return s;
     }
 
     public void setGrille(String s){
         String[] lignes = s.split("\n");
-        for (int i = 0; i < lignes.length; i++) {
+        for(int i = 0; i < lignes.length - 1; i++){
             String[] cases = lignes[i].split(" ");
-            for (int j = 0; j < cases.length; j++) {
+            for(int j = 0; j < cases.length; j++){
                 grille[i][j] = Integer.parseInt(cases[j]);
             }
         }
+        joueurCourant = Integer.parseInt(lignes[lignes.length - 1]);
     }
 
     public void transmettreGrille(Socket[] clients) throws IOException {
@@ -139,12 +148,30 @@ public class Grille {
         String grilleString = new String(gridBytes);
         this.setGrille(grilleString);
     }
-    
+
     public void initNumeroJoueur(Socket[] clients) throws IOException {
         for (int i = 0; i < clients.length; i++) {
             OutputStream out = clients[i].getOutputStream();
             out.write(i+1);
         }
+    }
+
+    public void setJoueurCourant(int joueur){
+        this.joueurCourant = joueur;
+    }
+
+    public int recevoirCoup(Socket client) throws IOException {
+        byte[] colonneBytes = new byte[1024];
+        client.getInputStream().read(colonneBytes);
+        String colonneString = new String(colonneBytes);
+        int colonne = Integer.parseInt(colonneString);
+        return colonne;
+    }
+
+    public void envoyerCoup(Socket serveur, int colonne) throws IOException {
+        String colonneString = Integer.toString(colonne);
+        byte[] colonneBytes = colonneString.getBytes();
+        serveur.getOutputStream().write(colonneBytes);
     }
 
 }
