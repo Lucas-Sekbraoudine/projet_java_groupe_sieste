@@ -4,6 +4,8 @@ import java.io.IOException;
 
 import Client.Client;
 import Client.ClientPanel;
+import Models.UserModel;
+import beans.User;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -19,21 +21,22 @@ public class MainGui extends Application {
 		Client client;
 		clientView = new ClientPanel();
 		try {
+
+
 			client = new Client("127.0.0.1", 3030);
 			client.setView(clientView);
 			clientView.setClient(client);
+
+
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
-		
+
 		Application.launch(MainGui.class, args);
-		
+
 	}
 
-	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		primaryStage.setTitle("Chat Java");

@@ -2,16 +2,17 @@ package beans;
 
 import org.bson.types.ObjectId;
 
+
 public class User {
-    private int id;
+    private ObjectId id;
     private String firstName;
     private String lastName;
 
-    public int getId() {
+    public ObjectId getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(ObjectId id) {
         this.id = id;
     }
 
@@ -56,7 +57,6 @@ public class User {
         this.userName = userName;
         this.passWord = passWord;
     }
-
     public User(){
 
     }
