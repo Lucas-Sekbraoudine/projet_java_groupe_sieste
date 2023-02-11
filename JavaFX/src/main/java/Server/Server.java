@@ -1,6 +1,5 @@
 package Server;
 
-import java.net.Socket;
 import java.util.List;
 
 import Common.Message;
@@ -8,9 +7,11 @@ import Common.Message;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class Server {
+public class Server implements Runnable{
 	private int port;
 	private List<ConnectedClient> clients;
+
+	private List<ConnectedClient> clientsInGame;
 	
 	Server(int port) throws IOException{
 		this.port = port;
@@ -44,8 +45,29 @@ public class Server {
 		broadcastMessage(new Message("Server",discClient.getId()+" vient de se déconnecter"), discClient.getId());
 	}
 
-	public Socket getSocket(int num) {
-		return clients.get(num).getSocket();
+	@Override
+	public void run() {
+		while (true) {
+			try {
+				//Verifie si il y a 2 joueurs en recherche de partie
+				List<ConnectedClient> clientsSearchGame = new ArrayList<ConnectedClient>();
+				for(ConnectedClient client : clients) {
+					if(client.isSearchingGame()) {
+						clientsSearchGame.add(client);
+					}
+					if (clientsSearchGame.size() >= 2) {
+						break;
+					}
+				}
+				//Si oui lance un thread de partie
+				if (clientsSearchGame.size() >= 2) {
+					Thread threadGame = new Thread(new Game(clientsSearchGame.get(0), clientsSearchGame.get(1)));
+					threadGame.start();
+				}
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
 	}
-	
 }

@@ -18,6 +18,10 @@ public class ConnectedClient implements Runnable{
 	private ObjectOutputStream out;
 	private ObjectInputStream in;
 	private ClientPanel view;
+
+
+
+	private boolean isSearchingGame;
 	
 	public void setView(ClientPanel view) {
 		this.view = view;
@@ -28,12 +32,12 @@ public class ConnectedClient implements Runnable{
 		this.socket = socket;
 		id = idCounter++;
 		out = new ObjectOutputStream(socket.getOutputStream());
+		isSearchingGame = false;
 		System.out.println("Nouvelle connexion, id = " + id);
 	}
 	
 	public void setId(int id) {
 		this.id = id;
-		
 	}	
 	
 	public int getId() {
@@ -82,6 +86,14 @@ public class ConnectedClient implements Runnable{
 
 	public Socket getSocket() {
 		return this.socket;
+	}
+
+	public boolean isSearchingGame() {
+		return isSearchingGame;
+	}
+
+	public void setSearchingGame(boolean searchingGame) {
+		isSearchingGame = searchingGame;
 	}
 	
 }
