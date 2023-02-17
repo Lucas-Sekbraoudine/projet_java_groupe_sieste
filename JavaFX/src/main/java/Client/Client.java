@@ -5,16 +5,24 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Scanner;
 
 import Common.Message;
 
-public class Client {
+public class Client implements Runnable{
 	private String address;
 	private int port;
 	private Socket socket;
 	private ObjectOutputStream out;
 	private ObjectInputStream in;
 	private ClientPanel view;
+	private boolean inGame = false;
+	private boolean SearchGame = false;
+	private String adversaire = "";
+	private int playerNumber = -1;
+	private int startPlayer = -1;
+	private int coupAdversaire = -1;
+	private String ResPartie = "";
 	
 	public void setView(ClientPanel view) {
 		this.view = view;
@@ -28,8 +36,9 @@ public class Client {
 		
 		/*Thread clientSend = new Thread(new ClientSend(socket, out));
 		clientSend.start();*/
-		Thread clientReceive = new Thread(new ClientReceive(this, socket));
-		clientReceive.start();
+		/*Thread clientReceive = new Thread(new ClientReceive(this, socket));
+		clientReceive.start();*/
+
 		
 	}
 	
@@ -53,6 +62,30 @@ public class Client {
 		this.out.flush();
 		this.out.writeObject(mess);
 	}
-	
+
+	public void run(){
+		//Si pas game ni de recherche de game on ouvre le scanner
+		if(!this.inGame && !this.SearchGame) {
+			System.out.println("search or exit");
+			Scanner sc = new Scanner(System.in);
+			String s = sc.nextLine();
+			if (s.equals("exit")) {
+				try {
+					this.disconnectedServer();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			} else if (s.equals("search")) {
+				//envoie au serveur qu on cherche une game
+				this.SearchGame = true;
+			}
+		} else if(this.SearchGame){
+
+		} else if (this.inGame){
+
+		}
+
+	}
 	
 }

@@ -30,7 +30,8 @@ public class Game implements Runnable{
                 this.currentPlayer = rand.nextInt(2)+1;
 
                 //Dis que la partie commence avec le num du joueur qui commence et le numero de chaque joueur
-                player1.sendMessage(new Message("Start", currentPlayer + " " + player1.getId() + " " + player2.getId()));
+                player1.sendMessage(new Message("Start", currentPlayer + ";" + player1.getId()));
+                player2.sendMessage(new Message("Start", currentPlayer + ";" + player2.getId()));
 
                 //Tant que la partie n'est pas finie
                 while (!puissance4.isFinished()) {
