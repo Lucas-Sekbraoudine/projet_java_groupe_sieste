@@ -57,7 +57,7 @@ public class ConnectedClient implements Runnable{
 					if (mess.getAction()=="move") {
 						this.setMove(Integer.parseInt(mess.getMess()));
 					}
-					else if (mess.getAction()=="searchGame") {
+					else if (mess.getAction()=="search") {
 						this.setSearchingGame(true);
 					}
 					else if (mess.getAction()=="stopSearchGame") {

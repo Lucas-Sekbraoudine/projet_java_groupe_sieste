@@ -22,7 +22,6 @@ public class Client implements Runnable{
 	private int playerNumber = -1;
 	private int startPlayer = -1;
 	private int coupAdversaire = -1;
-	private String ResPartie = "";
 	
 	public void setView(ClientPanel view) {
 		this.view = view;
@@ -63,29 +62,103 @@ public class Client implements Runnable{
 		this.out.writeObject(mess);
 	}
 
-	public void run(){
-		//Si pas game ni de recherche de game on ouvre le scanner
-		if(!this.inGame && !this.SearchGame) {
-			System.out.println("search or exit");
-			Scanner sc = new Scanner(System.in);
-			String s = sc.nextLine();
-			if (s.equals("exit")) {
+	public void run() {
+		while (true) {
+			Message mess = null;
+			//Si pas game ni de recherche de game on ouvre le scanner
+			if (!this.inGame && !this.SearchGame) {
+				System.out.println("search or exit");
+				Scanner sc = new Scanner(System.in);
+				String s = sc.nextLine();
+				if (s.equals("exit")) {
+					try {
+						this.disconnectedServer();
+						break;
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				} else if (s.equals("search")) {
+					//envoie au serveur qu on cherche une game
+					mess = new Message("search", s);
+					try {
+						if(!mess.getMess().isBlank()) {
+							out.writeObject(mess);
+							out.flush();
+						}
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+					this.SearchGame = true;
+				}
+			} else if (this.SearchGame) {
 				try {
-					this.disconnectedServer();
+					mess = (Message) in.readObject();
+				} catch (ClassNotFoundException e) {
+					e.printStackTrace();
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-			} else if (s.equals("search")) {
-				//envoie au serveur qu on cherche une game
-				this.SearchGame = true;
+				if (mess != null) {
+					if (mess.getAction() == "Start") {
+						String[] data = mess.getMess().split(";");
+						//TODO : Quand BDD ok
+						// setAdversaire(data[0]);
+						setStartPlayer(Integer.parseInt(data[0]));
+						setPlayerNumber(Integer.parseInt(data[1]));
+						this.inGame = true;
+						this.SearchGame = false;
+						//TODO: Lancer Thread Gestion partie
+					}
+				} else {
+					break;
+				}
+			} else if (this.inGame) {
+				try {
+					mess = (Message) in.readObject();
+				} catch (ClassNotFoundException e) {
+					e.printStackTrace();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+				if (mess != null) {
+					if(mess.getAction() == "Play") {
+						setCoupAdversaire(Integer.parseInt(mess.getMess()));
+					} else if (mess.getAction() == "Game") {
+						System.out.println(mess.getMess());
+						resetGame();
+					}
+				} else {
+					break;
+				}
 			}
-		} else if(this.SearchGame){
-
-		} else if (this.inGame){
 
 		}
-
 	}
-	
+
+	public void setAdversaire(String adversaire) {
+		this.adversaire = adversaire;
+	}
+
+	public void setPlayerNumber(int playerNumber) {
+		this.playerNumber = playerNumber;
+	}
+
+	public void setStartPlayer(int startPlayer) {
+		this.startPlayer = startPlayer;
+	}
+
+	public void setCoupAdversaire(int coupAdversaire) {
+		this.coupAdversaire = coupAdversaire;
+	}
+
+	public void resetGame() {
+		this.inGame = false;
+		this.SearchGame = false;
+		this.adversaire = "";
+		this.playerNumber = -1;
+		this.startPlayer = -1;
+		this.coupAdversaire = -1;
+	}
 }
+	
+
