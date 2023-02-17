@@ -63,6 +63,8 @@ public class Server implements Runnable{
 				if (clientsSearchGame.size() >= 2) {
 					Thread threadGame = new Thread(new Game(clientsSearchGame.get(0), clientsSearchGame.get(1)));
 					threadGame.start();
+					clientsSearchGame.get(0).setSearchingGame(false);
+					clientsSearchGame.get(1).setSearchingGame(false);
 				}
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {

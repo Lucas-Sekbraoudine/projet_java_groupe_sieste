@@ -1,23 +1,24 @@
+package Common;
+
 import java.io.Serializable;
 
 public class Message implements Serializable{
 
 	private static final long serialVersionUID = -6835194907138499736L;
-	private String sender;
+	private String mess;
 	private String action;
-	private Object data;
 
-	public Message(String action, Object data) {
+	public Message(String action, String mess) {
 		this.action = action;
-		this.data = data;
+		this.mess = mess;
 	}
 
-	public String getSender() {
-		return sender;
+	public String getMess() {
+		return mess;
 	}
 
-	public void setSender(String sender) {
-		this.sender = sender;
+	public void setMess(String mess) {
+		this.mess = mess;
 	}
 
 	public String getAction() {
@@ -28,11 +29,4 @@ public class Message implements Serializable{
 		this.action = action;
 	}
 
-	public Object getData() {
-		return data;
-	}
-
-	public void setData(Object data) {
-		this.data = data;
-	}
 }

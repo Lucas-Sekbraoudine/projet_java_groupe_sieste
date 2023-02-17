@@ -29,7 +29,7 @@ public class ClientSend implements Runnable{
 			mess = new Message("client", m);
 			
 			try {
-				if(!mess.getContent().isBlank()) {
+				if(!mess.getMess().isBlank()) {
 					out.writeObject(mess);
 					out.flush();
 				}

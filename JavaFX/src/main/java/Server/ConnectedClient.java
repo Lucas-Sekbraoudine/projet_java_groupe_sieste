@@ -19,6 +19,7 @@ public class ConnectedClient implements Runnable{
 	private ObjectInputStream in;
 	private ClientPanel view;
 
+	private int Move = -1;
 
 
 	private boolean isSearchingGame;
@@ -53,9 +54,22 @@ public class ConnectedClient implements Runnable{
 				
 				Message mess = (Message) in.readObject();
 				if(mess != null) {
-					mess.setSender(String.valueOf(id));
-					server.broadcastMessage(mess, id);
-					
+					if (mess.getAction()=="move") {
+						this.setMove(Integer.parseInt(mess.getMess()));
+					}
+					else if (mess.getAction()=="searchGame") {
+						this.setSearchingGame(true);
+					}
+					else if (mess.getAction()=="stopSearchGame") {
+						this.setSearchingGame(false);
+					}
+					else if (mess.getAction()=="disconnect") {
+						server.disconnectedClient(this);
+						isActive = false;
+					}
+					else {
+						server.broadcastMessage(mess, this.id);
+					}
 				}else {
 					server.disconnectedClient(this);
 					isActive = false;
@@ -84,10 +98,6 @@ public class ConnectedClient implements Runnable{
 		this.socket.close();
 	}
 
-	public Socket getSocket() {
-		return this.socket;
-	}
-
 	public boolean isSearchingGame() {
 		return isSearchingGame;
 	}
@@ -95,5 +105,13 @@ public class ConnectedClient implements Runnable{
 	public void setSearchingGame(boolean searchingGame) {
 		isSearchingGame = searchingGame;
 	}
-	
+
+	public int getMove() {
+		return Move;
+	}
+
+	public void setMove(int move) {
+		Move = move;
+	}
+
 }
