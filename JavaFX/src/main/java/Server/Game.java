@@ -74,6 +74,7 @@ public class Game implements Runnable{
                     player1.sendMessage(new Message("Game", "draw"));
                     player2.sendMessage(new Message("Game", "draw"));
                 }
+                running = false;
 
 
             } catch (IOException e) {

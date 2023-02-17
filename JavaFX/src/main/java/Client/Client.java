@@ -20,7 +20,7 @@ public class Client implements Runnable{
 	private boolean SearchGame = false;
 	private String adversaire = "";
 	private int playerNumber = -1;
-	private int startPlayer = -1;
+	private int currentPlayer = -1;
 	private int coupAdversaire = -1;
 	
 	public void setView(ClientPanel view) {
@@ -32,13 +32,11 @@ public class Client implements Runnable{
 		this.port = port;
 		this.socket = new Socket(address, port);
 		this.out = new ObjectOutputStream(this.socket.getOutputStream());
-		
-		/*Thread clientSend = new Thread(new ClientSend(socket, out));
-		clientSend.start();*/
-		/*Thread clientReceive = new Thread(new ClientReceive(this, socket));
-		clientReceive.start();*/
-
-		
+		try {
+			in = new ObjectInputStream(socket.getInputStream());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	public void disconnectedServer() throws IOException {
@@ -57,11 +55,11 @@ public class Client implements Runnable{
 	}
 
 	public void sendMessage(Message mess) throws IOException {
-		// TODO Auto-generated method stub
 		this.out.flush();
 		this.out.writeObject(mess);
 	}
 
+	@Override
 	public void run() {
 		while (true) {
 			Message mess = null;
@@ -82,13 +80,14 @@ public class Client implements Runnable{
 					mess = new Message("search", s);
 					try {
 						if(!mess.getMess().isBlank()) {
-							out.writeObject(mess);
+							System.out.println("on envoie au serveur");
 							out.flush();
+							out.writeObject(mess);
+							this.SearchGame = true;
 						}
 					} catch (IOException e) {
 						e.printStackTrace();
 					}
-					this.SearchGame = true;
 				}
 			} else if (this.SearchGame) {
 				try {
@@ -103,11 +102,12 @@ public class Client implements Runnable{
 						String[] data = mess.getMess().split(";");
 						//TODO : Quand BDD ok
 						// setAdversaire(data[0]);
-						setStartPlayer(Integer.parseInt(data[0]));
+						setCurrentPlayer(Integer.parseInt(data[0]));
 						setPlayerNumber(Integer.parseInt(data[1]));
 						this.inGame = true;
 						this.SearchGame = false;
-						//TODO: Lancer Thread Gestion partie
+						Thread ClientGame = new Thread(new ClientGame(this));
+						ClientGame.start();
 					}
 				} else {
 					break;
@@ -143,8 +143,8 @@ public class Client implements Runnable{
 		this.playerNumber = playerNumber;
 	}
 
-	public void setStartPlayer(int startPlayer) {
-		this.startPlayer = startPlayer;
+	public void setCurrentPlayer(int currentPlayer) {
+		this.currentPlayer = currentPlayer;
 	}
 
 	public void setCoupAdversaire(int coupAdversaire) {
@@ -156,8 +156,24 @@ public class Client implements Runnable{
 		this.SearchGame = false;
 		this.adversaire = "";
 		this.playerNumber = -1;
-		this.startPlayer = -1;
+		this.currentPlayer = -1;
 		this.coupAdversaire = -1;
+	}
+
+	public boolean isInGame() {
+		return inGame;
+	}
+
+	public int getPlayerNumber() {
+		return playerNumber;
+	}
+
+	public int getCurrentPlayer() {
+		return currentPlayer;
+	}
+
+	public int getCoupAdversaire() {
+		return coupAdversaire;
 	}
 }
 	

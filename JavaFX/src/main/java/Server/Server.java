@@ -26,7 +26,7 @@ public class Server implements Runnable{
 	
 	public void addClient(ConnectedClient newClient) throws IOException {
 		this.clients.add(newClient);
-		broadcastMessage(new Message("Server", newClient.getId()+" vient de se connecter"), newClient.getId());
+		//broadcastMessage(new Message("Server", newClient.getId()+" vient de se connecter"), newClient.getId());
 		
 	}
 	
@@ -61,6 +61,7 @@ public class Server implements Runnable{
 				}
 				//Si oui lance un thread de partie
 				if (clientsSearchGame.size() >= 2) {
+					System.out.println("!!!!!!!!!!!!!!!!!!!!!!");
 					Thread threadGame = new Thread(new Game(clientsSearchGame.get(0), clientsSearchGame.get(1)));
 					threadGame.start();
 					clientsSearchGame.get(0).setSearchingGame(false);

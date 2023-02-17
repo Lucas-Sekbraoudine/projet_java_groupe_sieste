@@ -13,10 +13,10 @@ public class MainClient {
 	 */
 	public static void main(String[] args) {
 		try {
-
 				String address = "127.0.0.1";
-				Integer port = new Integer(3030);
-				Client c = new Client(address, port);
+				Integer port = new Integer(3060);
+				Thread threadClient = new Thread(new Client(address, port));
+				threadClient.start();
 			
 		} catch (UnknownHostException e) {
 			e.printStackTrace();

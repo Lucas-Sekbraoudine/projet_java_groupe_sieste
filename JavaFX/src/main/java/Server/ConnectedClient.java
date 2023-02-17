@@ -48,7 +48,6 @@ public class ConnectedClient implements Runnable{
 	public void run() {
 		try {
 			in = new ObjectInputStream(socket.getInputStream());
-			
 			boolean isActive = true;
 			while (isActive) {
 				
@@ -59,6 +58,7 @@ public class ConnectedClient implements Runnable{
 					}
 					else if (mess.getAction()=="search") {
 						this.setSearchingGame(true);
+						System.out.println("Client " + this.getId() + " is searching game");
 					}
 					else if (mess.getAction()=="stopSearchGame") {
 						this.setSearchingGame(false);
@@ -66,9 +66,8 @@ public class ConnectedClient implements Runnable{
 					else if (mess.getAction()=="disconnect") {
 						server.disconnectedClient(this);
 						isActive = false;
-					}
-					else {
-						server.broadcastMessage(mess, this.id);
+					} else {
+						System.out.println("Message vide");
 					}
 				}else {
 					server.disconnectedClient(this);

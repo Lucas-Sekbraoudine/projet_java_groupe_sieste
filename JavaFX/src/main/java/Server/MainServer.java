@@ -13,7 +13,7 @@ public class MainServer {
 	public static void main(String[] args) {
 		try {
 
-				Integer port = new Integer(3030);
+				Integer port = new Integer(3060);
 				Server server = new Server(port);
 			
 		} catch (IOException e1) {
