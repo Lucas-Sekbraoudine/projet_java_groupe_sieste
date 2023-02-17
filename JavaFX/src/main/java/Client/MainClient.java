@@ -7,10 +7,6 @@ import java.net.UnknownHostException;
  *
  */
 public class MainClient {
-	/**
-	 * construct a new client
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		try {
 				String address = "127.0.0.1";
@@ -18,8 +14,6 @@ public class MainClient {
 				Thread threadClient = new Thread(new Client(address, port));
 				threadClient.start();
 			
-		} catch (UnknownHostException e) {
-			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

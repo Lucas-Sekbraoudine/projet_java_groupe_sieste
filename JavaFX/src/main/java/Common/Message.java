@@ -29,4 +29,8 @@ public class Message implements Serializable{
 		this.action = action;
 	}
 
+	public String toString() {
+		return "Action : " + action + " Message : " + mess;
+	}
+
 }

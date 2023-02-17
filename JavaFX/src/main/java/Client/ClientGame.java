@@ -7,8 +7,8 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class ClientGame implements Runnable{
-    private Client client;
-    private Puissance4 puissance4;
+    private final Client client;
+    private final Puissance4 puissance4;
 
     public ClientGame(Client client){
         this.client = client;

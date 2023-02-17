@@ -6,8 +6,8 @@ import java.net.Socket;
 
 public class Connection implements Runnable{
 
-	private Server server;
-	private ServerSocket serverSocket;
+	private final Server server;
+	private final ServerSocket serverSocket;
 
 	public Connection(Server server) throws IOException {
 		this.server = server;

@@ -13,27 +13,18 @@ import Common.Message;
 public class ConnectedClient implements Runnable{
 	private static int idCounter = 0;
 	private int id;
-	private Server server;
-	private Socket socket;
-	private ObjectOutputStream out;
+	private final Server server;
+	private final Socket socket;
+	private final ObjectOutputStream out;
 	private ObjectInputStream in;
-	private ClientPanel view;
-
 	private int Move = -1;
-
-
-	private boolean isSearchingGame;
-	
-	public void setView(ClientPanel view) {
-		this.view = view;
-	}
+	private boolean isSearchingGame = false;
 
 	public ConnectedClient(Server server, Socket socket) throws IOException {
 		this.server = server;
 		this.socket = socket;
 		id = idCounter++;
 		out = new ObjectOutputStream(socket.getOutputStream());
-		isSearchingGame = false;
 		System.out.println("Nouvelle connexion, id = " + id);
 	}
 	
@@ -53,21 +44,23 @@ public class ConnectedClient implements Runnable{
 				
 				Message mess = (Message) in.readObject();
 				if(mess != null) {
-					if (mess.getAction()=="move") {
+					if (mess.getAction().equals("move")) {
 						this.setMove(Integer.parseInt(mess.getMess()));
 					}
-					else if (mess.getAction()=="search") {
+					else if (mess.getAction().equals("search")) {
 						this.setSearchingGame(true);
 						System.out.println("Client " + this.getId() + " is searching game");
 					}
-					else if (mess.getAction()=="stopSearchGame") {
+					else if (mess.getAction().equals("stopSearchGame")) {
 						this.setSearchingGame(false);
+						System.out.println("Client " + this.getId() + " stop searching game");
 					}
-					else if (mess.getAction()=="disconnect") {
+					else if (mess.getAction().equals("disconnect")) {
 						server.disconnectedClient(this);
 						isActive = false;
 					} else {
 						System.out.println("Message vide");
+						System.out.println(mess.toString());
 					}
 				}else {
 					server.disconnectedClient(this);

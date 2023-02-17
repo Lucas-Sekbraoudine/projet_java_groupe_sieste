@@ -8,16 +8,15 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class Server implements Runnable{
-	private int port;
-	private List<ConnectedClient> clients;
-
-	private List<ConnectedClient> clientsInGame;
-	
+	private final int port;
+	private final List<ConnectedClient> clients;
+	boolean running = false;
 	Server(int port) throws IOException{
 		this.port = port;
 		this.clients = new ArrayList<ConnectedClient>();
 		Thread threadConnection = new Thread(new Connection(this));
 		threadConnection.start();
+		this.running = true;
 	}
 	
 	public int getPort() { return this.port; }
@@ -27,7 +26,7 @@ public class Server implements Runnable{
 	public void addClient(ConnectedClient newClient) throws IOException {
 		this.clients.add(newClient);
 		//broadcastMessage(new Message("Server", newClient.getId()+" vient de se connecter"), newClient.getId());
-		
+		System.out.println("On ajoute un client " + newClient.getId());
 	}
 	
 	public void broadcastMessage(Message mess, int id) throws IOException {
@@ -47,29 +46,26 @@ public class Server implements Runnable{
 
 	@Override
 	public void run() {
-		while (true) {
+		while (this.running) {
 			try {
-				//Verifie si il y a 2 joueurs en recherche de partie
-				List<ConnectedClient> clientsSearchGame = new ArrayList<ConnectedClient>();
-				for(ConnectedClient client : clients) {
-					if(client.isSearchingGame()) {
-						clientsSearchGame.add(client);
-					}
-					if (clientsSearchGame.size() >= 2) {
-						break;
-					}
-				}
-				//Si oui lance un thread de partie
-				if (clientsSearchGame.size() >= 2) {
-					System.out.println("!!!!!!!!!!!!!!!!!!!!!!");
-					Thread threadGame = new Thread(new Game(clientsSearchGame.get(0), clientsSearchGame.get(1)));
-					threadGame.start();
-					clientsSearchGame.get(0).setSearchingGame(false);
-					clientsSearchGame.get(1).setSearchingGame(false);
-				}
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
-				e.printStackTrace();
+				throw new RuntimeException(e);
+			}
+			//Verifie si il y a 2 joueurs en recherche de partie
+			List<ConnectedClient> clientsSearchGame = new ArrayList<ConnectedClient>();
+			for(ConnectedClient client : clients) {
+				if(client.isSearchingGame()) {
+					clientsSearchGame.add(client);
+				}
+			}
+			//Si oui lance un thread de partie
+			if (clientsSearchGame.size() >= 2) {
+				Thread threadGame = new Thread(new Game(clientsSearchGame.get(0), clientsSearchGame.get(1)));
+				threadGame.start();
+				clientsSearchGame.get(0).setSearchingGame(false);
+				clientsSearchGame.get(1).setSearchingGame(false);
+				System.out.println("La partie est lancée");
 			}
 		}
 	}

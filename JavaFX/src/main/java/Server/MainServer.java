@@ -6,15 +6,12 @@ import java.io.IOException;
  *
  */
 public class MainServer {
-	/**
-	 * creates a new server
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		try {
 
 				Integer port = new Integer(3060);
-				Server server = new Server(port);
+				Thread threadServer = new Thread(new Server(port));
+				threadServer.start();
 			
 		} catch (IOException e1) {
 			e1.printStackTrace();

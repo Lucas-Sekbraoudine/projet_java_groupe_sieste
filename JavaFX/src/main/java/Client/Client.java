@@ -92,13 +92,12 @@ public class Client implements Runnable{
 			} else if (this.SearchGame) {
 				try {
 					mess = (Message) in.readObject();
-				} catch (ClassNotFoundException e) {
-					e.printStackTrace();
-				} catch (IOException e) {
+				} catch (ClassNotFoundException | IOException e) {
 					e.printStackTrace();
 				}
 				if (mess != null) {
-					if (mess.getAction() == "Start") {
+					if (mess.getAction().equals("Start")) {
+						System.out.println(mess.toString());
 						String[] data = mess.getMess().split(";");
 						//TODO : Quand BDD ok
 						// setAdversaire(data[0]);
@@ -115,15 +114,13 @@ public class Client implements Runnable{
 			} else if (this.inGame) {
 				try {
 					mess = (Message) in.readObject();
-				} catch (ClassNotFoundException e) {
-					e.printStackTrace();
-				} catch (IOException e) {
+				} catch (ClassNotFoundException | IOException e) {
 					e.printStackTrace();
 				}
 				if (mess != null) {
-					if(mess.getAction() == "Play") {
+					if(mess.getAction().equals("Play")) {
 						setCoupAdversaire(Integer.parseInt(mess.getMess()));
-					} else if (mess.getAction() == "Game") {
+					} else if (mess.getAction().equals("Game")) {
 						System.out.println(mess.getMess());
 						resetGame();
 					}
