@@ -24,6 +24,11 @@
             <artifactId>mongo-java-driver</artifactId>
             <version>3.12.11</version>
         </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>17.0.2</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>

@@ -7,17 +7,9 @@ public class User {
     private ObjectId id;
     private String firstName;
     private String lastName;
-
-    public ObjectId getId() {
-        return id;
-    }
-
-    public void setId(ObjectId id) {
-        this.id = id;
-    }
-
     private String userName;
     private String passWord;
+    private String saltPassWord;
 
     public String getFirstName() {
         return firstName;
@@ -51,6 +43,14 @@ public class User {
         this.passWord = passWord;
     }
 
+    public ObjectId getId() {
+        return id;
+    }
+
+    public void setId(ObjectId id) {
+        this.id = id;
+    }
+
     public User(String firstName, String lastName, String userName, String passWord) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -59,5 +59,13 @@ public class User {
     }
     public User(){
 
+    }
+
+    public String getSaltPassWord() {
+        return saltPassWord;
+    }
+
+    public void setSaltPassWord(String saltPassWord) {
+        this.saltPassWord = saltPassWord;
     }
 }

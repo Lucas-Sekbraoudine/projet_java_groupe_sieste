@@ -3,6 +3,8 @@ import Common.HashPwd;
 import Models.UserModel;
 import beans.User;
 import javafx.application.Application;
+import java.util.Scanner;
+
 
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
@@ -18,12 +20,6 @@ public class MainClient{
 	 * @param args
 	 */
 	public static void main(String[] args) throws NoSuchAlgorithmException, InvalidKeySpecException {;
-		UserModel userModel = new UserModel();
-		HashPwd hashPwd = new HashPwd();
-		User user = new User("Lucas", "Antunes", "Twistere14", hashPwd.hashPassword("Salut"));
-		userModel.init();
-		userModel.createUser(user);
-		userModel.readAllUser();
 	}
 	private static void printUsage() {
 		System.out.println("java client.Client <address> <port>");

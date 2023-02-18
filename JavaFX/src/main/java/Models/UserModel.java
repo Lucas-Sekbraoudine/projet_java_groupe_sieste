@@ -1,6 +1,6 @@
 package Models;
 
-
+import Common.HashPwd;
 import beans.User;
 import com.mongodb.BasicDBObject;
 import com.mongodb.MongoClient;
@@ -14,13 +14,13 @@ import db.Connection;
 import org.bson.codecs.configuration.CodecRegistry;
 import org.bson.codecs.pojo.PojoCodecProvider;
 
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
 import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
-
-
 
 public class UserModel {
 
@@ -48,12 +48,23 @@ public class UserModel {
         return  userList;
     }
 
-    public void registerUser(String userName, String passWord){
+    public void loginUser(String userName, String passWord) throws NoSuchAlgorithmException, InvalidKeySpecException {
         BasicDBObject userNameId = new BasicDBObject();
         userNameId.put("userName", userName);
         FindIterable<User> cursor = userCollection.find(userNameId);
-        cursor.iterator().forEachRemaining((name) -> System.out.println(name.getFirstName()));
+        cursor.iterator().forEachRemaining(name-> {
+            try {
+                if (name.getUserName().compareTo(userName) == 0 && name.getPassWord().compareTo(HashPwd.hashPassword(passWord, "123")) == 0)
+                    System.out.println("Vous êtes connecté !!!");
 
+                else
+                    System.out.println("Utilisateur ou mot de passe incorrect !!!");
+
+            } catch (NoSuchAlgorithmException e) {
+                throw new RuntimeException(e);
+            } catch (InvalidKeySpecException e) {
+                throw new RuntimeException(e);
+            }
+        });
     }
-
 }

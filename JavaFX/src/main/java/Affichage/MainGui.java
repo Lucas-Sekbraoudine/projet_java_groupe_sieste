@@ -7,11 +7,16 @@ import Client.ClientPanel;
 import Models.UserModel;
 import beans.User;
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+
+
+
 
 public class MainGui extends Application {
 
@@ -20,18 +25,12 @@ public class MainGui extends Application {
 	public static void main(String[] args) {
 		Client client;
 		clientView = new ClientPanel();
-		try {
 
 
-			client = new Client("127.0.0.1", 3030);
-			client.setView(clientView);
-			clientView.setClient(client);
+		//client = new Client("127.0.0.1", 3030);
+		//client.setView(clientView);
+		//clientView.setClient(client);
 
-
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 
 		Application.launch(MainGui.class, args);
 
@@ -39,14 +38,9 @@ public class MainGui extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		primaryStage.setTitle("Chat Java");
-		Group root = new Group();
-		
-		
-		root.getChildren().add(clientView);
-		Scene scene = new Scene(root, 600, 500);
-		primaryStage.setTitle("Mon application");
-		primaryStage.setScene(scene);
+		Parent root = FXMLLoader.load(getClass().getResource("/fxml/Connexion.fxml"));
+		primaryStage.setTitle("Jacord - Connexion");
+		primaryStage.setScene(new Scene(root, 600, 400));
 		primaryStage.show();
 		
 		/*
