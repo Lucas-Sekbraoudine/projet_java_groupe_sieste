@@ -45,6 +45,7 @@ public class ConnectedClient implements Runnable{
 				Message mess = (Message) in.readObject();
 				if(mess != null) {
 					if (mess.getAction().equals("move")) {
+						System.out.println("Client " + this.getId() + " move " + mess.getMess());
 						this.setMove(Integer.parseInt(mess.getMess()));
 					}
 					else if (mess.getAction().equals("search")) {

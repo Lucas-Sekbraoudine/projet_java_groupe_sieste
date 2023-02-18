@@ -38,17 +38,24 @@ public class ClientGame implements Runnable{
                     throw new RuntimeException(e);
                 }
                 //Changer de joueur
-                client.setCurrentPlayer(client.getCurrentPlayer() == 1 ? 2 : 1);
+                client.changeCurrentPlayer();
             } else {
                 //Afficher le plateau
                 puissance4.printBoard();
                 //Attendre que le serveur joue
                 while (client.getCoupAdversaire() == -1) {
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
                 }
                 //Jouer le coup du serveur
                 puissance4.dropToken(client.getCoupAdversaire());
                 //Remettre le coup du serveur a -1
                 client.setCoupAdversaire(-1);
+                //Changer de joueur
+                client.changeCurrentPlayer();
             }
         }
     }

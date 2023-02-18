@@ -3,7 +3,6 @@ package Client;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
 
@@ -18,7 +17,7 @@ public class Client implements Runnable{
 	private ClientPanel view;
 	private boolean inGame = false;
 	private boolean SearchGame = false;
-	private String adversaire = "";
+	private int adversaire = -1;
 	private int playerNumber = -1;
 	private int currentPlayer = -1;
 	private int coupAdversaire = -1;
@@ -99,10 +98,9 @@ public class Client implements Runnable{
 					if (mess.getAction().equals("Start")) {
 						System.out.println(mess.toString());
 						String[] data = mess.getMess().split(";");
-						//TODO : Quand BDD ok
-						// setAdversaire(data[0]);
 						setCurrentPlayer(Integer.parseInt(data[0]));
 						setPlayerNumber(Integer.parseInt(data[1]));
+						setAdversaire(Integer.parseInt(data[2]));
 						this.inGame = true;
 						this.SearchGame = false;
 						Thread ClientGame = new Thread(new ClientGame(this));
@@ -112,12 +110,14 @@ public class Client implements Runnable{
 					break;
 				}
 			} else if (this.inGame) {
+				System.out.println("in game");
 				try {
 					mess = (Message) in.readObject();
 				} catch (ClassNotFoundException | IOException e) {
 					e.printStackTrace();
 				}
 				if (mess != null) {
+					System.out.println(mess.toString());
 					if(mess.getAction().equals("Play")) {
 						setCoupAdversaire(Integer.parseInt(mess.getMess()));
 					} else if (mess.getAction().equals("Game")) {
@@ -132,7 +132,7 @@ public class Client implements Runnable{
 		}
 	}
 
-	public void setAdversaire(String adversaire) {
+	public void setAdversaire(int adversaire) {
 		this.adversaire = adversaire;
 	}
 
@@ -151,7 +151,7 @@ public class Client implements Runnable{
 	public void resetGame() {
 		this.inGame = false;
 		this.SearchGame = false;
-		this.adversaire = "";
+		this.adversaire = -1;
 		this.playerNumber = -1;
 		this.currentPlayer = -1;
 		this.coupAdversaire = -1;
@@ -171,6 +171,18 @@ public class Client implements Runnable{
 
 	public int getCoupAdversaire() {
 		return coupAdversaire;
+	}
+
+	public int getAdversaire() {
+		return adversaire;
+	}
+
+	public void changeCurrentPlayer() {
+		if(this.currentPlayer == adversaire) {
+			this.currentPlayer = playerNumber;
+		} else {
+			this.currentPlayer = adversaire;
+		}
 	}
 }
 	
