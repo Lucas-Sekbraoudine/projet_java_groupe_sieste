@@ -137,6 +137,9 @@ public class Puissance4 {
         return isGameOver();
     }
 
+    public boolean isDraw() {
+        return isGameOver() && getWinner() == EMPTY_SLOT;
+    }
 
 
 }

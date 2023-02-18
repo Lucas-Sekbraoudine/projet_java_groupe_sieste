@@ -39,6 +39,7 @@ public class ClientGame implements Runnable{
                 }
                 //Changer de joueur
                 client.changeCurrentPlayer();
+                puissance4.switchPlayer();
             } else {
                 //Afficher le plateau
                 puissance4.printBoard();
@@ -56,6 +57,7 @@ public class ClientGame implements Runnable{
                 client.setCoupAdversaire(-1);
                 //Changer de joueur
                 client.changeCurrentPlayer();
+                puissance4.switchPlayer();
             }
         }
     }

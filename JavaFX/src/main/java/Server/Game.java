@@ -48,6 +48,7 @@ public class Game implements Runnable{
                         player1.setMove(-1);
                         //Changer de joueur
                         currentPlayer = player2.getId();
+                        puissance4.switchPlayer();
                     }
 
                 } else {
@@ -60,19 +61,20 @@ public class Game implements Runnable{
                         player2.setMove(-1);
                         //Changer de joueur
                         currentPlayer = player1.getId();
+                        puissance4.switchPlayer();
                     }
                 }
             }
             //Envoie le resultat de la partie a chaque joueur
-            if (puissance4.getWinner() == 1) {
-                player1.sendMessage(new Message("Game", "win"));
-                player2.sendMessage(new Message("Game", "lose"));
-            } else if (puissance4.getWinner() == 2) {
+            if (puissance4.isDraw()) {
+                player1.sendMessage(new Message("Game", "draw"));
+                player2.sendMessage(new Message("Game", "draw"));
+            } else if (currentPlayer == player1.getId()) {
                 player1.sendMessage(new Message("Game", "lose"));
                 player2.sendMessage(new Message("Game", "win"));
             } else {
-                player1.sendMessage(new Message("Game", "draw"));
-                player2.sendMessage(new Message("Game", "draw"));
+                player1.sendMessage(new Message("Game", "win"));
+                player2.sendMessage(new Message("Game", "lose"));
             }
 
 
