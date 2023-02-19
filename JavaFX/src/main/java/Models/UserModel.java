@@ -36,11 +36,13 @@ public class UserModel {
         // On créer une contrainte sur le userName pour qu'il soit unique
         userCollection.createIndex(new BasicDBObject("userName", 1), new IndexOptions().unique(true));
 
+
     }
 
     public void createUser(User user){
 
         userCollection.insertOne(user);
+
     }
     public List<User> readAllUser(){
         List<User> userList = new ArrayList<>();

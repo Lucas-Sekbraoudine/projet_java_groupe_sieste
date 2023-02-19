@@ -1,5 +1,6 @@
 package Controller;
 
+import Common.LoadScene;
 import Models.UserModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -7,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Hyperlink;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -20,10 +22,12 @@ public class ConnexionController {
     public TextField userName;
 
     @FXML
-    public TextField passWord;
+    public PasswordField passWord;
 
     @FXML
     public Hyperlink inscription;
+
+    LoadScene loadScene = new LoadScene();
 
     @FXML
     public  void handleConnexionPress(ActionEvent event) throws NoSuchAlgorithmException, InvalidKeySpecException {
@@ -35,13 +39,6 @@ public class ConnexionController {
 
     @FXML
     public void handleInscriptionPress(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/Inscription.fxml"));
-        Parent root = (Parent) fxmlLoader.load();
-        Stage newStage = new Stage();
-        newStage.setScene(new Scene(root));
-        newStage.setTitle("Jacord - Inscription");
-        Stage currentStage = (Stage)inscription.getScene().getWindow();
-        currentStage.close();
-        newStage.show();
+        loadScene.loadScene("/fxml/Inscription.fxml", inscription);
     }
 }

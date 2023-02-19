@@ -19,7 +19,8 @@ public class MainClient{
 	 * construct a new client
 	 * @param args
 	 */
-	public static void main(String[] args) throws NoSuchAlgorithmException, InvalidKeySpecException {;
+	public static void main(String[] args) throws NoSuchAlgorithmException, InvalidKeySpecException {
+		;
 	}
 	private static void printUsage() {
 		System.out.println("java client.Client <address> <port>");
