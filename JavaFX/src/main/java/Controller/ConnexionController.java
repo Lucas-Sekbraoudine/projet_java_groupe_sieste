@@ -45,12 +45,14 @@ public class ConnexionController {
         Client client = new Client("127.0.0.1", 3060);
         Thread threadClient = new Thread(client);
         threadClient.start();
-        loadScene.loadScene("/fxml/Playersearch.fxml", inscription);
+        PlayersearchController playersearchController = new PlayersearchController(client);
+        loadScene.loadScene("/fxml/Playersearch.fxml", inscription, playersearchController);
+
         return userName;
     }
 
     @FXML
     public void handleInscriptionPress(ActionEvent event) throws IOException {
-        loadScene.loadScene("/fxml/Inscription.fxml", inscription);
+        loadScene.loadScene("/fxml/Inscription.fxml", inscription, null);
     }
 }

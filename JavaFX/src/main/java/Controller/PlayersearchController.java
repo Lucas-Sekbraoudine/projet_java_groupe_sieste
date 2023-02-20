@@ -19,4 +19,8 @@ public class PlayersearchController {
         client.sendMessage((new Message("search", "search")));
 
     }
+
+    public void initialize(){
+
+    }
 }

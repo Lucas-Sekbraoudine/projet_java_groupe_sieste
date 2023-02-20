@@ -44,7 +44,7 @@ public class InscriptionController {
 
     @FXML
     public void handleConnexionPress() throws IOException {
-        loadScene.loadScene("/fxml/Connexion.fxml", connexion);
+        loadScene.loadScene("/fxml/Connexion.fxml", connexion, null);
     }
 
     @FXML
@@ -54,7 +54,7 @@ public class InscriptionController {
             userModel.init();
             userModel.createUser(user);
             userModel.readAllUser();
-            loadScene.loadScene("/fxml/Connexion.fxml", connexion);
+            loadScene.loadScene("/fxml/Connexion.fxml", connexion, null);
 
         } catch (MongoWriteException e){
             if(e.getError().getCategory() == ErrorCategory.DUPLICATE_KEY){

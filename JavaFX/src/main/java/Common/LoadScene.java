@@ -1,5 +1,6 @@
 package Common;
 
+import Client.Client;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,8 +14,9 @@ import java.io.IOException;
 public class LoadScene {
 
     @FXML
-    public void loadScene(String pathScene, Hyperlink currentScene) throws IOException {
+    public void loadScene(String pathScene, Hyperlink currentScene, Object objectController) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(pathScene));
+        fxmlLoader.setController(objectController);
         Parent root = (Parent) fxmlLoader.load();
         Stage newStage = new Stage();
         newStage.setResizable(false);
