@@ -1,7 +1,11 @@
 package Client;
 
+import Common.LoadScene;
 import Common.Message;
 import Common.Puissance4;
+import Controller.GamescreenController;
+import javafx.fxml.FXML;
+import javafx.scene.control.Hyperlink;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -9,15 +13,23 @@ import java.util.Scanner;
 public class ClientGame implements Runnable{
     private final Client client;
     private final Puissance4 puissance4;
+    LoadScene loadScene = new LoadScene();
 
-    public ClientGame(Client client){
+    /*public GamescreenController gamescreenController;
+    @FXML
+    public Hyperlink gamescreen;
+*/
+    public ClientGame(Client client) throws IOException {
         this.client = client;
         this.puissance4 = new Puissance4();
+        /*this.gamescreenController = new GamescreenController(client);
+        loadScene.loadScene("/fxml/Gamescreen.fxml", gamescreen, this.gamescreenController);*/
     }
 
     public void run() {
         while (client.isInGame()) {
             //Si c'est le tour du joueur
+            /*this.gamescreenController.setTurnVisible();*/
             if (client.getPlayerNumber() == client.getCurrentPlayer()) {
                 //Afficher le plateau
                 puissance4.printBoard();

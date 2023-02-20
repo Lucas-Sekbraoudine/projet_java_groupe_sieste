@@ -20,7 +20,7 @@ public class Client implements Runnable{
 	private boolean SearchGame = false;
 	private int adversaire = -1;
 	private int playerNumber = -1;
-	private int currentPlayer = -1;
+	private int currentPlayer = -2;
 	private int coupAdversaire = -1;
 	private int coupJoueur = -1;
 
@@ -112,7 +112,12 @@ public class Client implements Runnable{
 						setAdversaire(Integer.parseInt(data[2]));
 						this.inGame = true;
 						this.SearchGame = false;
-						Thread ClientGame = new Thread(new ClientGame(this));
+						Thread ClientGame = null;
+						try {
+							ClientGame = new Thread(new ClientGame(this));
+						} catch (IOException e) {
+							throw new RuntimeException(e);
+						}
 						ClientGame.start();
 					}
 				} else {
@@ -162,7 +167,7 @@ public class Client implements Runnable{
 		this.SearchGame = false;
 		this.adversaire = -1;
 		this.playerNumber = -1;
-		this.currentPlayer = -1;
+		this.currentPlayer = -2;
 		this.coupAdversaire = -1;
 	}
 

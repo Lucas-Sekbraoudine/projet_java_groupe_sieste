@@ -1,14 +1,45 @@
 package Controller;
 
 import Client.Client;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
+
+import java.time.format.TextStyle;
 
 public class GamescreenController {
 
+    @FXML
+    public Text your_turn;
+
+    @FXML
+    public Text not_your_turn;
     Client client;
 
     public GamescreenController(Client client){
+
         this.client = client;
+
+        Platform.runLater(() -> {
+            Thread t = new Thread(() -> {
+                while (true){
+                    try {
+                        Thread.sleep(100);
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+                    if (client.getPlayerNumber() == client.getCurrentPlayer()) {
+                        your_turn.setVisible(true);
+                        not_your_turn.setVisible(false);
+                    } else if (client.getCurrentPlayer() == client.getAdversaire()){
+                        your_turn.setVisible(false);
+                        not_your_turn.setVisible(true);
+                    }
+                }
+            });
+            t.start();
+        });
     }
 
     @FXML
@@ -60,5 +91,15 @@ public class GamescreenController {
         }
     }
 
+    @FXML
+    public void setTurnVisible(){
+        if(client.getPlayerNumber() == client.getCurrentPlayer()){
+            your_turn.setVisible(true);
+            not_your_turn.setVisible(false);
+        } else {
+            your_turn.setVisible(false);
+            not_your_turn.setVisible(true);
+        }
+    }
 
 }

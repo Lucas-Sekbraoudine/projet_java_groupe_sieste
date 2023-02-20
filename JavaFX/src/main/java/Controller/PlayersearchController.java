@@ -3,6 +3,7 @@ package Controller;
 import Client.Client;
 import Common.LoadScene;
 import Common.Message;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Hyperlink;
@@ -20,15 +21,20 @@ public class PlayersearchController {
     public Hyperlink playersearch;
 
     public PlayersearchController(Client client){
+
         this.client = client;
     }
     @FXML
     public void handlePlayerSearch(ActionEvent event) throws IOException {
-        client.sendMessage((new Message("search", "search")));
-        client.setSearchGame(true);
+        if (!client.isSearchGame()){
+            client.sendMessage((new Message("search", "search")));
+            client.setSearchGame(true);
+        }
         GamescreenController gamescreenController = new GamescreenController(client);
         loadScene.loadScene("/fxml/Gamescreen.fxml", playersearch, gamescreenController);
     }
+
+
 
     public void initialize(){
 
