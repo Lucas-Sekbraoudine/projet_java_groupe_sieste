@@ -225,7 +225,7 @@ public class GamescreenController {
                     }
                     winner.setVisible(client.getWinner());
                     looser.setVisible(client.getLooser());
-                    new_game.setVisible(client.getWinner() || client.getLooser());
+                    //new_game.setVisible(client.getWinner() || client.getLooser());
                 }
             });
             t.start();
@@ -513,6 +513,7 @@ public class GamescreenController {
             client.setSearchGame(true);
         }
         this.client.resetGame();
+        this.client.setSearchGame(true);
         GamescreenController gamescreenController = new GamescreenController(client);
         loadScene.loadScene("/fxml/Gamescreen.fxml", playersearch, gamescreenController);
     }
