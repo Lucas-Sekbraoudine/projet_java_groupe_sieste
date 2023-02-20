@@ -26,7 +26,8 @@ public class PlayersearchController {
     public void handlePlayerSearch(ActionEvent event) throws IOException {
         client.sendMessage((new Message("search", "search")));
         client.setSearchGame(true);
-        loadScene.loadScene("/fxml/Gamescreen.fxml", playersearch, null);
+        GamescreenController gamescreenController = new GamescreenController(client);
+        loadScene.loadScene("/fxml/Gamescreen.fxml", playersearch, gamescreenController);
     }
 
     public void initialize(){
