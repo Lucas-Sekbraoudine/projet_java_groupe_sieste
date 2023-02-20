@@ -62,7 +62,7 @@ public class Client implements Runnable{
 		while (true) {
 			Message mess = null;
 			//Si pas game ni de recherche de game on ouvre le scanner
-			if (!this.inGame && !this.SearchGame) {
+			/*if (!this.inGame && !this.SearchGame) {
 				System.out.println("search or exit");
 				Scanner sc = new Scanner(System.in);
 				String s = sc.nextLine();
@@ -87,7 +87,7 @@ public class Client implements Runnable{
 						e.printStackTrace();
 					}
 				}
-			} else if (this.SearchGame) {
+			} else */if (this.SearchGame) {
 				try {
 					mess = (Message) in.readObject();
 				} catch (ClassNotFoundException | IOException e) {
