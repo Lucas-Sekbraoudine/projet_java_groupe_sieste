@@ -15,6 +15,10 @@ public class GamescreenController {
 
     @FXML
     public Text not_your_turn;
+
+    @FXML
+    public Text search_game;
+
     Client client;
 
     public GamescreenController(Client client){
@@ -29,6 +33,7 @@ public class GamescreenController {
                     } catch (InterruptedException e) {
                         throw new RuntimeException(e);
                     }
+                    search_game.setVisible(client.isSearchGame());
                     if (client.getPlayerNumber() == client.getCurrentPlayer()) {
                         your_turn.setVisible(true);
                         not_your_turn.setVisible(false);
@@ -90,16 +95,4 @@ public class GamescreenController {
             client.setCoupJoueur(6);
         }
     }
-
-    @FXML
-    public void setTurnVisible(){
-        if(client.getPlayerNumber() == client.getCurrentPlayer()){
-            your_turn.setVisible(true);
-            not_your_turn.setVisible(false);
-        } else {
-            your_turn.setVisible(false);
-            not_your_turn.setVisible(true);
-        }
-    }
-
 }

@@ -35,7 +35,7 @@ public class ClientGame implements Runnable{
                 puissance4.printBoard();
                 while (client.getCoupJoueur() == -1) {
                     try {
-                        Thread.sleep(1000);
+                        Thread.sleep(100);
                     } catch (InterruptedException e) {
                         throw new RuntimeException(e);
                     }
@@ -59,7 +59,7 @@ public class ClientGame implements Runnable{
                 //Attendre que le serveur joue
                 while (client.getCoupAdversaire() == -1) {
                     try {
-                        Thread.sleep(1000);
+                        Thread.sleep(100);
                     } catch (InterruptedException e) {
                         throw new RuntimeException(e);
                     }

@@ -35,7 +35,7 @@ public class Game implements Runnable{
 
             //Tant que la partie n'est pas finie
             while (!puissance4.isFinished()) {
-                Thread.sleep(1000);
+                Thread.sleep(100);
                 //Si c'est le tour du joueur 1
                 if (currentPlayer == player1.getId()){
                     //Attendre que le joueur 1 joue

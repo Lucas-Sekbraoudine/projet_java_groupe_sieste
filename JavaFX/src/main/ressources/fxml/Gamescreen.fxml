@@ -24,428 +24,429 @@
                   <Image url="@../image/grid.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="108.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="108.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="108.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="108.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="108.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="108.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="108.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="108.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="108.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="108.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="108.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="108.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="168.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="168.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="168.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="168.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="168.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="168.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="168.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="168.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="168.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="168.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="168.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="168.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="347.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="347.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="347.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="347.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="347.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="347.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="347.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="347.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="347.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="347.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="347.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="347.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="407.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="407.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="407.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="407.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="407.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="407.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="407.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="407.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="407.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="407.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="407.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="407.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="228.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="228.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="228.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="228.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="228.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="228.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="228.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="228.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="228.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="228.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="228.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="228.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="288.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="288.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="288.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="288.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="288.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="288.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="288.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="288.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="288.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="288.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="288.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="288.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JJP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="108.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="108.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="108.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="108.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="108.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="108.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="108.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="108.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="108.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="108.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="108.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="108.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="168.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="168.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="168.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="168.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="168.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="168.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="168.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="168.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="168.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="168.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="168.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="168.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="347.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="347.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="347.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="347.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="347.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="347.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="347.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="347.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="347.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="347.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="347.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="347.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="407.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="407.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="407.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="407.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="407.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="407.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="407.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="407.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="407.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="407.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="407.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="407.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="228.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="228.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="228.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="228.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="228.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="228.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="228.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="228.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="228.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="228.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="228.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="228.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="288.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="288.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="288.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="288.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="288.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="288.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="288.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="288.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="288.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="288.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="288.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="288.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <Text layoutX="559.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Votre tour!" fx:id="your_turn" visible="false"/>
-            <Text layoutX="559.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tour de l'adversaire" fx:id="not_your_turn" visible="false"/>
+            <Text fx:id="your_turn" layoutX="559.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Votre tour!" visible="false" />
+            <Text fx:id="not_your_turn" layoutX="559.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tour de l'adversaire" visible="false" />
+            <Text fx:id="search_game" layoutX="542.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="En attente d'un adversaire" visible="false" />
          </children>
     </AnchorPane>
   </children>

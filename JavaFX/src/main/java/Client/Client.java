@@ -65,7 +65,7 @@ public class Client implements Runnable{
 		while (true) {
 			Message mess = null;
 			try {
-				Thread.sleep(1000);
+				Thread.sleep(100);
 			} catch (InterruptedException e) {
 				throw new RuntimeException(e);
 			}

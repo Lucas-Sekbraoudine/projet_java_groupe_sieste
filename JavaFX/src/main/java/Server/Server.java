@@ -48,7 +48,7 @@ public class Server implements Runnable{
 	public void run() {
 		while (this.running) {
 			try {
-				Thread.sleep(1000);
+				Thread.sleep(100);
 			} catch (InterruptedException e) {
 				throw new RuntimeException(e);
 			}
