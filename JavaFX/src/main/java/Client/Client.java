@@ -15,8 +15,10 @@ public class Client implements Runnable{
 	private ObjectInputStream in;
 	private AccueilController view;
 	private boolean inGame = false;
-	private char[][] board;
+	private char[][] board = null;
+	private boolean winner = false;
 
+	private boolean looser = false;
 
 	private boolean SearchGame = false;
 	private int adversaire = -1;
@@ -111,7 +113,15 @@ public class Client implements Runnable{
 						setCoupAdversaire(Integer.parseInt(mess.getMess()));
 					} else if (mess.getSender().equals("Game")) {
 						System.out.println(mess.getMess());
-						resetGame();
+						//Set winner in client
+						if(mess.getMess().equals("win")) {
+							this.winner = true;
+							this.looser = false;
+						} else if (mess.getMess().equals("lose")) {
+							this.winner = false;
+							this.looser = true;
+						}
+						this.inGame = false;
 					}
 				} else {
 					break;
@@ -145,6 +155,8 @@ public class Client implements Runnable{
 		this.currentPlayer = -2;
 		this.coupAdversaire = -1;
 		this.startPlayer = -1;
+		this.winner = false;
+		this.looser = false;
 	}
 
 	public boolean isInGame() {
@@ -206,6 +218,18 @@ public class Client implements Runnable{
 
 	public int getStartPlayer() {
 		return startPlayer;
+	}
+
+	public boolean canDropToken(int column) {
+		return column >= 0 && column < 7 && board[0][column] == ' ';
+	}
+
+	public boolean getWinner() {
+		return winner;
+	}
+
+	public boolean getLooser() {
+		return looser;
 	}
 }
 

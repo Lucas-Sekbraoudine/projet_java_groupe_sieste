@@ -144,4 +144,5 @@ public class Puissance4 {
     public char[][] getBoard() {
         return board;
     }
+
 }
