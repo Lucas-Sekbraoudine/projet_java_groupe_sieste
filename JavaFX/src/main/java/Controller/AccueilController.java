@@ -26,7 +26,8 @@ public class AccueilController {
     public String receivedMessage;
 
 
-    Client client = new Client("127.0.0.1", 3060);
+
+
 
     public AccueilController() throws IOException {
     }
@@ -35,6 +36,7 @@ public class AccueilController {
     public void handleSendMessagePress(ActionEvent event) throws IOException, ClassNotFoundException {
         Message message = new Message("moi",  messageSend.getText());
         try {
+            Client client = new Client("127.0.0.1", 3360);
             client.sendMessage(message);
             if (messageArea.getText().equals(""))
                 messageArea.appendText(messageSend.getText());

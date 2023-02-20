@@ -1,5 +1,6 @@
 package Controller;
 
+import Client.Client;
 import Common.LoadScene;
 import Models.UserModel;
 import javafx.event.ActionEvent;
@@ -29,12 +30,20 @@ public class ConnexionController {
 
     LoadScene loadScene = new LoadScene();
 
+
+
+    public ConnexionController() throws IOException {
+    }
+
     @FXML
     public TextField handleConnexionPress(ActionEvent event) throws NoSuchAlgorithmException, InvalidKeySpecException, IOException {
         UserModel userModel = new UserModel();
         userModel.init();
         userModel.loginUser(userName.getText(), passWord.getText());
-        loadScene.loadScene("/fxml/Accueil.fxml", inscription);
+        Client client = new Client("127.0.0.1", 3060);
+        Thread threadClient = new Thread(client);
+        threadClient.start();
+        //loadScene.loadScene("/fxml/Accueil.fxml", inscription);
         return userName;
     }
 

@@ -25,6 +25,5 @@ public class MainGui extends Application {
 		primaryStage.setTitle("Jacord - Connexion");
 		primaryStage.setScene(new Scene(root, 600, 400));
 		primaryStage.show();
-
 	}
 }
