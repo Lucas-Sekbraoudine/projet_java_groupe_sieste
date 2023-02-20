@@ -46,8 +46,6 @@ public class ConnexionController {
         Thread threadClient = new Thread(client);
         threadClient.start();
         loadScene.loadScene("/fxml/Playersearch.fxml", inscription);
-
-
         return userName;
     }
 
