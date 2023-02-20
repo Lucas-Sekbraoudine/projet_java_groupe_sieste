@@ -16,6 +16,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class ConnexionController {
 
@@ -39,11 +40,14 @@ public class ConnexionController {
     public TextField handleConnexionPress(ActionEvent event) throws NoSuchAlgorithmException, InvalidKeySpecException, IOException {
         UserModel userModel = new UserModel();
         userModel.init();
+        AtomicBoolean success = new AtomicBoolean(true);
         userModel.loginUser(userName.getText(), passWord.getText());
         Client client = new Client("127.0.0.1", 3060);
         Thread threadClient = new Thread(client);
         threadClient.start();
-        loadScene.loadScene("/fxml/Accueil.fxml", inscription);
+        loadScene.loadScene("/fxml/Playersearch.fxml", inscription);
+
+
         return userName;
     }
 

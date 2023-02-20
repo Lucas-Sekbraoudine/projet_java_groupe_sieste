@@ -18,6 +18,7 @@ import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
 import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
@@ -53,14 +54,16 @@ public class UserModel {
     public void loginUser(String userName, String passWord) throws NoSuchAlgorithmException, InvalidKeySpecException {
         BasicDBObject userNameId = new BasicDBObject();
         userNameId.put("userName", userName);
+
         FindIterable<User> cursor = userCollection.find(userNameId);
         cursor.iterator().forEachRemaining(name-> {
             try {
-                if (name.getUserName().compareTo(userName) == 0 && name.getPassWord().compareTo(HashPwd.hashPassword(passWord, "123")) == 0)
+                if (name.getUserName().compareTo(userName) == 0 && name.getPassWord().compareTo(HashPwd.hashPassword(passWord, "123")) == 0){
                     System.out.println("Vous êtes connecté !!!");
-
-                else
+                }
+                else{
                     System.out.println("Utilisateur ou mot de passe incorrect !!!");
+                }
 
             } catch (NoSuchAlgorithmException e) {
                 throw new RuntimeException(e);
