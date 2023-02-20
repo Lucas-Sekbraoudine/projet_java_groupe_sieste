@@ -1,26 +1,22 @@
 package Client;
-import Common.HashPwd;
-import Models.UserModel;
-import beans.User;
-import javafx.application.Application;
-import java.util.Scanner;
-
-
-import java.security.NoSuchAlgorithmException;
-import java.security.spec.InvalidKeySpecException;
-
+import java.io.IOException;
+import java.net.UnknownHostException;
 /**
  * starts a client. Reads the address and port from the command line argument
  * @author Remi Watrigant
  *
  */
-public class MainClient{
-	/**
-	 * construct a new client
-	 * @param args
-	 */
-	public static void main(String[] args) throws NoSuchAlgorithmException, InvalidKeySpecException {
-		;
+public class MainClient {
+	public static void main(String[] args) {
+		try {
+			String address = "127.0.0.1";
+			Integer port = new Integer(3060);
+			Thread threadClient = new Thread(new Client(address, port));
+			threadClient.start();
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 	private static void printUsage() {
 		System.out.println("java client.Client <address> <port>");

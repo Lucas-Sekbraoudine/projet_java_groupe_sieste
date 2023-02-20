@@ -30,11 +30,12 @@ public class ConnexionController {
     LoadScene loadScene = new LoadScene();
 
     @FXML
-    public  void handleConnexionPress(ActionEvent event) throws NoSuchAlgorithmException, InvalidKeySpecException {
+    public TextField handleConnexionPress(ActionEvent event) throws NoSuchAlgorithmException, InvalidKeySpecException, IOException {
         UserModel userModel = new UserModel();
         userModel.init();
         userModel.loginUser(userName.getText(), passWord.getText());
-
+        loadScene.loadScene("/fxml/Accueil.fxml", inscription);
+        return userName;
     }
 
     @FXML
