@@ -28,8 +28,8 @@ public class ClientGame implements Runnable{
 
     public void run() {
         while (client.isInGame()) {
+            this.client.setBoard(puissance4.getBoard());
             //Si c'est le tour du joueur
-            /*this.gamescreenController.setTurnVisible();*/
             if (client.getPlayerNumber() == client.getCurrentPlayer()) {
                 //Afficher le plateau
                 puissance4.printBoard();

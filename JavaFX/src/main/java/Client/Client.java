@@ -15,12 +15,14 @@ public class Client implements Runnable{
 	private ObjectInputStream in;
 	private AccueilController view;
 	private boolean inGame = false;
+	private char[][] board;
 
 
 	private boolean SearchGame = false;
 	private int adversaire = -1;
 	private int playerNumber = -1;
 	private int currentPlayer = -2;
+	private int startPlayer = -1;
 	private int coupAdversaire = -1;
 	private int coupJoueur = -1;
 
@@ -68,35 +70,7 @@ public class Client implements Runnable{
 				Thread.sleep(100);
 			} catch (InterruptedException e) {
 				throw new RuntimeException(e);
-			}
-			//Si pas game ni de recherche de game on ouvre le scanner
-			/*if (!this.inGame && !this.SearchGame) {
-				System.out.println("search or exit");
-				Scanner sc = new Scanner(System.in);
-				String s = sc.nextLine();
-				if (s.equals("exit")) {
-					try {
-						this.disconnectedServer();
-						break;
-					} catch (IOException e) {
-						e.printStackTrace();
-					}
-				} else if (s.equals("search")) {
-					//envoie au serveur qu on cherche une game
-					mess = new Message("search", s);
-					try {
-						if(!mess.getMess().isBlank()) {
-							System.out.println("on envoie au serveur");
-							out.flush();
-							out.writeObject(mess);
-							this.SearchGame = true;
-						}
-					} catch (IOException e) {
-						e.printStackTrace();
-					}
-				}
-
-			} else */if (this.SearchGame) {
+			}if (this.SearchGame) {
 
 				try {
 					mess = (Message) in.readObject();
@@ -108,6 +82,7 @@ public class Client implements Runnable{
 						System.out.println(mess.toString());
 						String[] data = mess.getMess().split(";");
 						setCurrentPlayer(Integer.parseInt(data[0]));
+						setStartPlayer(Integer.parseInt(data[0]));
 						setPlayerNumber(Integer.parseInt(data[1]));
 						setAdversaire(Integer.parseInt(data[2]));
 						this.inGame = true;
@@ -169,6 +144,7 @@ public class Client implements Runnable{
 		this.playerNumber = -1;
 		this.currentPlayer = -2;
 		this.coupAdversaire = -1;
+		this.startPlayer = -1;
 	}
 
 	public boolean isInGame() {
@@ -214,6 +190,22 @@ public class Client implements Runnable{
 		} else {
 			this.currentPlayer = adversaire;
 		}
+	}
+
+	public void setBoard(char[][] board) {
+		this.board = board;
+	}
+
+	public char[][] getBoard() {
+		return board;
+	}
+
+	public void setStartPlayer(int startPlayer) {
+		this.startPlayer = startPlayer;
+	}
+
+	public int getStartPlayer() {
+		return startPlayer;
 	}
 }
 

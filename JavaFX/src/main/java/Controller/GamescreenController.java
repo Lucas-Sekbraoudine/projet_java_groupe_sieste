@@ -4,11 +4,183 @@ import Client.Client;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 
 import java.time.format.TextStyle;
 
 public class GamescreenController {
+
+    @FXML
+    public ImageView rouge_1_1;
+    @FXML
+    public ImageView rouge_1_2;
+    @FXML
+    public ImageView rouge_1_3;
+    @FXML
+    public ImageView rouge_1_4;
+    @FXML
+    public ImageView rouge_1_5;
+    @FXML
+    public ImageView rouge_1_6;
+    @FXML
+    public ImageView rouge_3_1;
+    @FXML
+    public ImageView rouge_3_2;
+    @FXML
+    public ImageView rouge_3_3;
+    @FXML
+    public ImageView rouge_3_4;
+    @FXML
+    public ImageView rouge_3_5;
+    @FXML
+    public ImageView rouge_3_6;
+    @FXML
+    public ImageView rouge_2_1;
+    @FXML
+    public ImageView rouge_2_2;
+    @FXML
+    public ImageView rouge_2_3;
+    @FXML
+    public ImageView rouge_2_4;
+    @FXML
+    public ImageView rouge_2_5;
+    @FXML
+    public ImageView rouge_2_6;
+    @FXML
+    public ImageView rouge_4_1;
+    @FXML
+    public ImageView rouge_4_2;
+    @FXML
+    public ImageView rouge_4_3;
+    @FXML
+    public ImageView rouge_4_4;
+    @FXML
+    public ImageView rouge_4_5;
+    @FXML
+    public ImageView rouge_4_6;
+    @FXML
+    public ImageView rouge_5_1;
+    @FXML
+    public ImageView rouge_5_2;
+    @FXML
+    public ImageView rouge_5_3;
+    @FXML
+    public ImageView rouge_5_4;
+    @FXML
+    public ImageView rouge_5_5;
+    @FXML
+    public ImageView rouge_5_6;
+    @FXML
+    public ImageView rouge_6_1;
+    @FXML
+    public ImageView rouge_6_2;
+    @FXML
+    public ImageView rouge_6_3;
+    @FXML
+    public ImageView rouge_6_4;
+    @FXML
+    public ImageView rouge_6_5;
+    @FXML
+    public ImageView rouge_6_6;
+    @FXML
+    public ImageView rouge_7_1;
+    @FXML
+    public ImageView rouge_7_2;
+    @FXML
+    public ImageView rouge_7_3;
+    @FXML
+    public ImageView rouge_7_4;
+    @FXML
+    public ImageView rouge_7_5;
+    @FXML
+    public ImageView rouge_7_6;
+    @FXML
+    public ImageView jaune_1_1;
+    @FXML
+    public ImageView jaune_1_2;
+    @FXML
+    public ImageView jaune_1_3;
+    @FXML
+    public ImageView jaune_1_4;
+    @FXML
+    public ImageView jaune_1_5;
+    @FXML
+    public ImageView jaune_1_6;
+    @FXML
+    public ImageView jaune_3_1;
+    @FXML
+    public ImageView jaune_3_2;
+    @FXML
+    public ImageView jaune_3_3;
+    @FXML
+    public ImageView jaune_3_4;
+    @FXML
+    public ImageView jaune_3_5;
+    @FXML
+    public ImageView jaune_3_6;
+    @FXML
+    public ImageView jaune_2_1;
+    @FXML
+    public ImageView jaune_2_2;
+    @FXML
+    public ImageView jaune_2_3;
+    @FXML
+    public ImageView jaune_2_4;
+    @FXML
+    public ImageView jaune_2_5;
+    @FXML
+    public ImageView jaune_2_6;
+    @FXML
+    public ImageView jaune_4_1;
+    @FXML
+    public ImageView jaune_4_2;
+    @FXML
+    public ImageView jaune_4_3;
+    @FXML
+    public ImageView jaune_4_4;
+    @FXML
+    public ImageView jaune_4_5;
+    @FXML
+    public ImageView jaune_4_6;
+    @FXML
+    public ImageView jaune_5_1;
+    @FXML
+    public ImageView jaune_5_2;
+    @FXML
+    public ImageView jaune_5_3;
+    @FXML
+    public ImageView jaune_5_4;
+    @FXML
+    public ImageView jaune_5_5;
+    @FXML
+    public ImageView jaune_5_6;
+    @FXML
+    public ImageView jaune_6_1;
+    @FXML
+    public ImageView jaune_6_2;
+    @FXML
+    public ImageView jaune_6_3;
+    @FXML
+    public ImageView jaune_6_4;
+    @FXML
+    public ImageView jaune_6_5;
+    @FXML
+    public ImageView jaune_6_6;
+    @FXML
+    public ImageView jaune_7_1;
+    @FXML
+    public ImageView jaune_7_2;
+    @FXML
+    public ImageView jaune_7_3;
+    @FXML
+    public ImageView jaune_7_4;
+    @FXML
+    public ImageView jaune_7_5;
+    @FXML
+    public ImageView jaune_7_6;
+    
+
 
     @FXML
     public Text your_turn;

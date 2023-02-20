@@ -141,5 +141,7 @@ public class Puissance4 {
         return isGameOver() && getWinner() == EMPTY_SLOT;
     }
 
-
+    public char[][] getBoard() {
+        return board;
+    }
 }
