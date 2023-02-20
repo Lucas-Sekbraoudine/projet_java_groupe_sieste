@@ -11,13 +11,13 @@
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="448.0" prefWidth="684.0" VBox.vgrow="ALWAYS">
 
          <children>
-            <Button layoutX="76.0" layoutY="372.0" mnemonicParsing="false" text="Colonne1" />
-            <Button layoutX="143.0" layoutY="372.0" mnemonicParsing="false" text="Colonne2" />
-            <Button layoutX="277.0" layoutY="372.0" mnemonicParsing="false" text="Colonne4" />
-            <Button layoutX="344.0" layoutY="372.0" mnemonicParsing="false" text="Colonne5" />
-            <Button layoutX="210.0" layoutY="372.0" mnemonicParsing="false" text="Colonne3" />
-            <Button layoutX="478.0" layoutY="372.0" mnemonicParsing="false" text="Colonne7" />
-            <Button layoutX="411.0" layoutY="372.0" mnemonicParsing="false" text="Colonne6" />
+            <Button layoutX="76.0" layoutY="372.0" mnemonicParsing="false" text="Colonne1" onAction="#handleButton1"/>
+            <Button layoutX="143.0" layoutY="372.0" mnemonicParsing="false" text="Colonne2" onAction="#handleButton2"/>
+            <Button layoutX="277.0" layoutY="372.0" mnemonicParsing="false" text="Colonne4" onAction="#handleButton4"/>
+            <Button layoutX="344.0" layoutY="372.0" mnemonicParsing="false" text="Colonne5" onAction="#handleButton5"/>
+            <Button layoutX="210.0" layoutY="372.0" mnemonicParsing="false" text="Colonne3" onAction="#handleButton3"/>
+            <Button layoutX="478.0" layoutY="372.0" mnemonicParsing="false" text="Colonne7" onAction="#handleButton7"/>
+            <Button layoutX="411.0" layoutY="372.0" mnemonicParsing="false" text="Colonne6" onAction="#handleButton6"/>
             <ImageView fitHeight="370.0" fitWidth="447.0" layoutX="97.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../image/grid.png" />

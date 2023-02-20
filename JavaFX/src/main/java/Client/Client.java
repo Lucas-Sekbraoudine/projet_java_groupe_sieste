@@ -22,6 +22,7 @@ public class Client implements Runnable{
 	private int playerNumber = -1;
 	private int currentPlayer = -1;
 	private int coupAdversaire = -1;
+	private int coupJoueur = -1;
 
 	public void setView(AccueilController view) {
 		this.view = view;
@@ -191,6 +192,14 @@ public class Client implements Runnable{
 
 	public void setSearchGame(boolean searchGame) {
 		SearchGame = searchGame;
+	}
+
+	public void setCoupJoueur(int coupJoueur) {
+		this.coupJoueur = coupJoueur;
+	}
+
+	public int getCoupJoueur() {
+		return coupJoueur;
 	}
 
 

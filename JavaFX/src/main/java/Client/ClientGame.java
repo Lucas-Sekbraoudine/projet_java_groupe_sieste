@@ -21,14 +21,14 @@ public class ClientGame implements Runnable{
             if (client.getPlayerNumber() == client.getCurrentPlayer()) {
                 //Afficher le plateau
                 puissance4.printBoard();
-                //Attendre que le joueur joue
-                System.out.println("A votre tour de jouer. Entrez un nombre entre 0 et 6");
-                Scanner sc = new Scanner(System.in);
-                int move = sc.nextInt();
-                while (move<0 || move>6) {
-                    System.out.println("Veuillez entrer un nombre entre 0 et 6");
-                    move = sc.nextInt();
+                while (client.getCoupJoueur() == -1) {
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
                 }
+                int move = client.getCoupJoueur();
                 //Jouer le coup du joueur
                 puissance4.dropToken(move);
                 //Envoyer le coup du joueur au serveur
@@ -40,6 +40,7 @@ public class ClientGame implements Runnable{
                 //Changer de joueur
                 client.changeCurrentPlayer();
                 puissance4.switchPlayer();
+                client.setCoupJoueur(-1);
             } else {
                 //Afficher le plateau
                 puissance4.printBoard();
