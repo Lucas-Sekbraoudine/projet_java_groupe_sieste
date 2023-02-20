@@ -43,7 +43,7 @@ public class ConnexionController {
         Client client = new Client("127.0.0.1", 3060);
         Thread threadClient = new Thread(client);
         threadClient.start();
-        //loadScene.loadScene("/fxml/Accueil.fxml", inscription);
+        loadScene.loadScene("/fxml/Accueil.fxml", inscription);
         return userName;
     }
 

@@ -17,6 +17,7 @@ public class LoadScene {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(pathScene));
         Parent root = (Parent) fxmlLoader.load();
         Stage newStage = new Stage();
+        newStage.setResizable(false);
         newStage.setScene(new Scene(root));
         newStage.setTitle("Jacord");
         Stage currentStage = (Stage)currentScene.getScene().getWindow();
