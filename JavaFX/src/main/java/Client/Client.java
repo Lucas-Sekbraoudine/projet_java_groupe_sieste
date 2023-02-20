@@ -15,6 +15,8 @@ public class Client implements Runnable{
 	private ObjectInputStream in;
 	private AccueilController view;
 	private boolean inGame = false;
+
+
 	private boolean SearchGame = false;
 	private int adversaire = -1;
 	private int playerNumber = -1;
@@ -61,6 +63,11 @@ public class Client implements Runnable{
 	public void run() {
 		while (true) {
 			Message mess = null;
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				throw new RuntimeException(e);
+			}
 			//Si pas game ni de recherche de game on ouvre le scanner
 			/*if (!this.inGame && !this.SearchGame) {
 				System.out.println("search or exit");
@@ -87,7 +94,9 @@ public class Client implements Runnable{
 						e.printStackTrace();
 					}
 				}
+
 			} else */if (this.SearchGame) {
+
 				try {
 					mess = (Message) in.readObject();
 				} catch (ClassNotFoundException | IOException e) {
@@ -175,6 +184,15 @@ public class Client implements Runnable{
 	public int getAdversaire() {
 		return adversaire;
 	}
+
+	public boolean isSearchGame() {
+		return SearchGame;
+	}
+
+	public void setSearchGame(boolean searchGame) {
+		SearchGame = searchGame;
+	}
+
 
 	public void changeCurrentPlayer() {
 		if(this.currentPlayer == adversaire) {
