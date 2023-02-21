@@ -3,25 +3,34 @@ package Common;
 import java.io.Serializable;
 
 public class Message implements Serializable{
-	private String sender,content;
-	public static final long serialVersionUID = 1L;
-	
-	public Message(String sender, String content){
+
+	private static final long serialVersionUID = -6835194907138499736L;
+	private String mess;
+	private String sender;
+
+	public Message(String sender, String mess) {
 		this.sender = sender;
-		this.content = content;
+		this.mess = mess;
 	}
-	
-	@Override
+
+	public String getMess() {
+		return mess;
+	}
+
+	public void setMess(String mess) {
+		this.mess = mess;
+	}
+
+	public String getSender() {
+		return sender;
+	}
+
+	public void setSENDER(String sender) {
+		this.sender = sender;
+	}
+
 	public String toString() {
-		return sender + " : " + content;
+		return "Sender : " + sender + " Message : " + mess;
 	}
 
-	public String getContent() {
-		return content;
-	}
-
-	public void setSender(String sender) {
-		this.sender = sender;
-		
-	}
 }

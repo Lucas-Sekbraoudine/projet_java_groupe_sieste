@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="400.0" prefWidth="800" xmlns="http://javafx.com/javafx/13" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="448.0" prefWidth="684.0" VBox.vgrow="ALWAYS">
+
+         <children>
+            <Button layoutX="76.0" layoutY="372.0" mnemonicParsing="false" onAction="#handleButton1" text="Colonne1" />
+            <Button layoutX="143.0" layoutY="372.0" mnemonicParsing="false" onAction="#handleButton2" text="Colonne2" />
+            <Button layoutX="277.0" layoutY="372.0" mnemonicParsing="false" onAction="#handleButton4" text="Colonne4" />
+            <Button layoutX="344.0" layoutY="372.0" mnemonicParsing="false" onAction="#handleButton5" text="Colonne5" />
+            <Button layoutX="210.0" layoutY="372.0" mnemonicParsing="false" onAction="#handleButton3" text="Colonne3" />
+            <Button layoutX="478.0" layoutY="372.0" mnemonicParsing="false" onAction="#handleButton7" text="Colonne7" />
+            <Button layoutX="411.0" layoutY="372.0" mnemonicParsing="false" onAction="#handleButton6" text="Colonne6" />
+            <ImageView fitHeight="370.0" fitWidth="447.0" layoutX="97.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/grid.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_1_1" fitHeight="58.0" fitWidth="56.0" layoutX="108.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_1_6" fitHeight="58.0" fitWidth="56.0" layoutX="108.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_1_4" fitHeight="58.0" fitWidth="56.0" layoutX="108.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_1_3" fitHeight="58.0" fitWidth="56.0" layoutX="108.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_1_5" fitHeight="58.0" fitWidth="56.0" layoutX="108.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_1_2" fitHeight="58.0" fitWidth="56.0" layoutX="108.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_2_1" fitHeight="58.0" fitWidth="56.0" layoutX="168.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_2_6" fitHeight="58.0" fitWidth="56.0" layoutX="168.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_2_4" fitHeight="58.0" fitWidth="56.0" layoutX="168.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_2_3" fitHeight="58.0" fitWidth="56.0" layoutX="168.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_2_5" fitHeight="58.0" fitWidth="56.0" layoutX="168.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_2_2" fitHeight="58.0" fitWidth="56.0" layoutX="168.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_5_1" fitHeight="58.0" fitWidth="56.0" layoutX="347.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_5_6" fitHeight="58.0" fitWidth="56.0" layoutX="347.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_5_4" fitHeight="58.0" fitWidth="56.0" layoutX="347.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_5_3" fitHeight="58.0" fitWidth="56.0" layoutX="347.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_5_5" fitHeight="58.0" fitWidth="56.0" layoutX="347.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_5_2" fitHeight="58.0" fitWidth="56.0" layoutX="347.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_6_1" fitHeight="58.0" fitWidth="56.0" layoutX="407.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_6_6" fitHeight="58.0" fitWidth="56.0" layoutX="407.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_6_4" fitHeight="58.0" fitWidth="56.0" layoutX="407.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_6_3" fitHeight="58.0" fitWidth="56.0" layoutX="407.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_6_5" fitHeight="58.0" fitWidth="56.0" layoutX="407.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_6_2" fitHeight="58.0" fitWidth="56.0" layoutX="407.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_3_1" fitHeight="58.0" fitWidth="56.0" layoutX="228.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_3_6" fitHeight="58.0" fitWidth="56.0" layoutX="228.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_3_4" fitHeight="58.0" fitWidth="56.0" layoutX="228.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_3_3" fitHeight="58.0" fitWidth="56.0" layoutX="228.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_3_5" fitHeight="58.0" fitWidth="56.0" layoutX="228.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_3_2" fitHeight="58.0" fitWidth="56.0" layoutX="228.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_4_1" fitHeight="58.0" fitWidth="56.0" layoutX="288.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_4_6" fitHeight="58.0" fitWidth="56.0" layoutX="288.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_4_4" fitHeight="58.0" fitWidth="56.0" layoutX="288.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_4_3" fitHeight="58.0" fitWidth="56.0" layoutX="288.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_4_5" fitHeight="58.0" fitWidth="56.0" layoutX="288.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_4_2" fitHeight="58.0" fitWidth="56.0" layoutX="288.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_7_1" fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_7_6" fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_7_4" fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_7_3" fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_7_5" fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="jaune_7_2" fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JJP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_1_1" fitHeight="58.0" fitWidth="56.0" layoutX="108.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_1_6" fitHeight="58.0" fitWidth="56.0" layoutX="108.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_1_4" fitHeight="58.0" fitWidth="56.0" layoutX="108.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_1_3" fitHeight="58.0" fitWidth="56.0" layoutX="108.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_1_5" fitHeight="58.0" fitWidth="56.0" layoutX="108.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_1_2" fitHeight="58.0" fitWidth="56.0" layoutX="108.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_2_1" fitHeight="58.0" fitWidth="56.0" layoutX="168.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_2_6" fitHeight="58.0" fitWidth="56.0" layoutX="168.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_2_4" fitHeight="58.0" fitWidth="56.0" layoutX="168.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_2_3" fitHeight="58.0" fitWidth="56.0" layoutX="168.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_2_5" fitHeight="58.0" fitWidth="56.0" layoutX="168.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_2_2" fitHeight="58.0" fitWidth="56.0" layoutX="168.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_5_1" fitHeight="58.0" fitWidth="56.0" layoutX="347.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_5_6" fitHeight="58.0" fitWidth="56.0" layoutX="347.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_5_4" fitHeight="58.0" fitWidth="56.0" layoutX="347.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_5_3" fitHeight="58.0" fitWidth="56.0" layoutX="347.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_5_5" fitHeight="58.0" fitWidth="56.0" layoutX="347.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_5_2" fitHeight="58.0" fitWidth="56.0" layoutX="347.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_6_1" fitHeight="58.0" fitWidth="56.0" layoutX="407.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_6_6" fitHeight="58.0" fitWidth="56.0" layoutX="407.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_6_4" fitHeight="58.0" fitWidth="56.0" layoutX="407.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_6_3" fitHeight="58.0" fitWidth="56.0" layoutX="407.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_6_5" fitHeight="58.0" fitWidth="56.0" layoutX="407.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_6_2" fitHeight="58.0" fitWidth="56.0" layoutX="407.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_3_1" fitHeight="58.0" fitWidth="56.0" layoutX="228.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_3_6" fitHeight="58.0" fitWidth="56.0" layoutX="228.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_3_4" fitHeight="58.0" fitWidth="56.0" layoutX="228.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_3_3" fitHeight="58.0" fitWidth="56.0" layoutX="228.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_3_5" fitHeight="58.0" fitWidth="56.0" layoutX="228.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_3_2" fitHeight="58.0" fitWidth="56.0" layoutX="228.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_4_1" fitHeight="58.0" fitWidth="56.0" layoutX="288.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_4_6" fitHeight="58.0" fitWidth="56.0" layoutX="288.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_4_4" fitHeight="58.0" fitWidth="56.0" layoutX="288.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_4_3" fitHeight="58.0" fitWidth="56.0" layoutX="288.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_4_5" fitHeight="58.0" fitWidth="56.0" layoutX="288.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_4_2" fitHeight="58.0" fitWidth="56.0" layoutX="288.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_7_1" fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_7_6" fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_7_4" fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_7_3" fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_7_5" fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rouge_7_2" fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../image/JRP4.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="your_turn" layoutX="559.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Votre tour!" visible="false" />
+            <Text fx:id="not_your_turn" layoutX="559.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tour de l'adversaire" visible="false" />
+            <Text fx:id="search_game" layoutX="542.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="En attente d'un adversaire" visible="false" />
+            <Text fx:id="winner" layoutX="111.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Winner !" visible="false" wrappingWidth="418.13671875">
+               <font>
+                  <Font size="100.0" />
+               </font>
+            </Text>
+            <Text fx:id="looser" layoutX="117.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Looser" visible="false" wrappingWidth="418.13671875">
+               <font>
+                  <Font size="100.0" />
+               </font>
+            </Text>
+            <Button fx:id="new_game" layoutX="14.0" layoutY="324.0" mnemonicParsing="false" onAction="#handleNewGame" text="New Game" visible="false" />
+            <Button layoutX="728.0" layoutY="352.0" mnemonicParsing="false" onAction="#handleSendMessage" text="Envoyer" />
+            <TextField fx:id="messageSender" layoutX="565.0" layoutY="352.0" />
+            <TextArea fx:id="messageArea" layoutX="545.0" layoutY="97.0" prefHeight="252.0" prefWidth="251.0" />
+            <Button fx:id="exit" layoutX="26.0" layoutY="14.0" mnemonicParsing="false" text="Exit" onAction="#handleExit" visible="false"/>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>
