@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -8,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="400.0" prefWidth="800" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="448.0" prefWidth="684.0" VBox.vgrow="ALWAYS">
 
@@ -440,7 +442,7 @@
                   <Image url="@../image/JRP4.png" />
                </image>
             </ImageView>
-            <ImageView  fx:id="rouge_7_2" fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true"  visible="false">
+            <ImageView fx:id="rouge_7_2" fitHeight="58.0" fitWidth="56.0" layoutX="467.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../image/JRP4.png" />
                </image>
@@ -458,7 +460,10 @@
                   <Font size="100.0" />
                </font>
             </Text>
-            <Button fx:id="new_game" layoutX="579.0" layoutY="352.0" mnemonicParsing="false" text="New Game" visible="false" onAction="#handleNewGame"/>
+            <Button fx:id="new_game" layoutX="14.0" layoutY="324.0" mnemonicParsing="false" onAction="#handleNewGame" text="New Game" visible="false" />
+            <Button layoutX="728.0" layoutY="352.0" mnemonicParsing="false" onAction="#handleSendMessage" text="Envoyer" />
+            <TextField layoutX="565.0" layoutY="352.0" fx:id="messageSender"/>
+            <TextArea layoutX="545.0" layoutY="97.0" prefHeight="252.0" prefWidth="251.0" fx:id="messageArea"/>
          </children>
     </AnchorPane>
   </children>

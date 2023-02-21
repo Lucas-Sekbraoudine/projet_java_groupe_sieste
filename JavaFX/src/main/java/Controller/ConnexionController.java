@@ -46,13 +46,13 @@ public class ConnexionController {
         Thread threadClient = new Thread(client);
         threadClient.start();
         PlayersearchController playersearchController = new PlayersearchController(client);
-        loadScene.loadScene("/fxml/Playersearch.fxml", inscription, playersearchController);
+        loadScene.loadScene("/fxml/Playersearch.fxml", inscription, playersearchController, 600, 400);
 
         return userName;
     }
 
     @FXML
     public void handleInscriptionPress(ActionEvent event) throws IOException {
-        loadScene.loadScene("/fxml/Inscription.fxml", inscription, null);
+        loadScene.loadScene("/fxml/Inscription.fxml", inscription, null, 600, 400);
     }
 }

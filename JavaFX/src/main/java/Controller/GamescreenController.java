@@ -7,6 +7,7 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
@@ -201,6 +202,12 @@ public class GamescreenController {
     @FXML
     public Text search_game;
 
+    @FXML
+    public TextField messageSender;
+
+    @FXML
+    public TextArea messageArea;
+
     Client client;
 
     public GamescreenController(Client client){
@@ -244,8 +251,8 @@ public class GamescreenController {
                         if (board != null) {
                             int rows = 6;
                             int columns =7;
-                            for (int i = 0; i < board.length; i++) {
-                                for (int j = 0; j < board[i].length ; j++) {
+                            for (int i = 0; i < rows; i++) {
+                                for (int j = 0; j < columns ; j++) {
                                     char c = board[i][j];
                                     if (c == 'R') {
                                         if (i == 0) {
@@ -455,6 +462,13 @@ public class GamescreenController {
             });
             t.start();
         });
+
+        Platform.runLater(() ->{
+            Thread t3 = new Thread(() ->{
+
+            });
+            t3.start();
+        });
     }
 
     @FXML
@@ -515,6 +529,21 @@ public class GamescreenController {
         this.client.resetGame();
         this.client.setSearchGame(true);
         GamescreenController gamescreenController = new GamescreenController(client);
-        loadScene.loadScene("/fxml/Gamescreen.fxml", playersearch, gamescreenController);
+        loadScene.loadScene("/fxml/Gamescreen.fxml", playersearch, gamescreenController, 600, 400);
+    }
+
+    @FXML
+    public void handleSendMessage() throws IOException {
+        Message message = new Message("message", messageSender.getText());
+        try {
+            client.sendMessage(message);
+            if (messageArea.getText().equals(""))
+                messageArea.appendText(messageSender.getText());
+            else{
+                messageArea.appendText("\n" + messageSender.getText());
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

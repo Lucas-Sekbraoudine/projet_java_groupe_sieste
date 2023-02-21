@@ -31,7 +31,7 @@ public class PlayersearchController {
             client.setSearchGame(true);
         }
         GamescreenController gamescreenController = new GamescreenController(client);
-        loadScene.loadScene("/fxml/Gamescreen.fxml", playersearch, gamescreenController);
+        loadScene.loadScene("/fxml/Gamescreen.fxml", playersearch, gamescreenController, 800, 400);
     }
 
 

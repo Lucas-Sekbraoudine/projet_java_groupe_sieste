@@ -54,9 +54,10 @@ public class Client implements Runnable{
 		System.exit(0);
 	}
 
-	public void messageReceived(Message mess) throws IOException, ClassNotFoundException {
-
-		System.out.println(mess);
+	public void messageReceived() throws IOException, ClassNotFoundException {
+			Message mess = null;
+		 mess = (Message) in.readObject();
+		 System.out.println(mess);
 	}
 
 	public void sendMessage(Message mess) throws IOException {
