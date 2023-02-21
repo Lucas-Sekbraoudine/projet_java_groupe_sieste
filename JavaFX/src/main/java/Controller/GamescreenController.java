@@ -225,7 +225,7 @@ public class GamescreenController {
                     }
                     winner.setVisible(client.getWinner());
                     looser.setVisible(client.getLooser());
-                    //new_game.setVisible(client.getWinner() || client.getLooser());
+                    new_game.setVisible(client.getWinner() || client.getLooser());
                 }
             });
             t.start();
@@ -244,8 +244,8 @@ public class GamescreenController {
                         if (board != null) {
                             int rows = 6;
                             int columns =7;
-                            for (int i = 0; i < board.length; i++) {
-                                for (int j = 0; j < board[i].length ; j++) {
+                            for (int i = 0; i < rows; i++) {
+                                for (int j = 0; j < columns ; j++) {
                                     char c = board[i][j];
                                     if (c == 'R') {
                                         if (i == 0) {
@@ -510,11 +510,98 @@ public class GamescreenController {
     public void handleNewGame() throws IOException {
         if (!client.isSearchGame()){
             client.sendMessage((new Message("search", "search")));
+            this.client.resetGame();
+            resetVisible();
             client.setSearchGame(true);
         }
-        this.client.resetGame();
-        this.client.setSearchGame(true);
-        GamescreenController gamescreenController = new GamescreenController(client);
-        loadScene.loadScene("/fxml/Gamescreen.fxml", playersearch, gamescreenController);
+    }
+
+    public void resetVisible(){
+        jaune_1_1.setVisible(false);
+        jaune_2_1.setVisible(false);
+        jaune_3_1.setVisible(false);
+        jaune_4_1.setVisible(false);
+        jaune_5_1.setVisible(false);
+        jaune_6_1.setVisible(false);
+        jaune_7_1.setVisible(false);
+        jaune_1_2.setVisible(false);
+        jaune_2_2.setVisible(false);
+        jaune_3_2.setVisible(false);
+        jaune_4_2.setVisible(false);
+        jaune_5_2.setVisible(false);
+        jaune_6_2.setVisible(false);
+        jaune_7_2.setVisible(false);
+        jaune_1_3.setVisible(false);
+        jaune_2_3.setVisible(false);
+        jaune_3_3.setVisible(false);
+        jaune_4_3.setVisible(false);
+        jaune_5_3.setVisible(false);
+        jaune_6_3.setVisible(false);
+        jaune_7_3.setVisible(false);
+        jaune_1_4.setVisible(false);
+        jaune_2_4.setVisible(false);
+        jaune_3_4.setVisible(false);
+        jaune_4_4.setVisible(false);
+        jaune_5_4.setVisible(false);
+        jaune_6_4.setVisible(false);
+        jaune_7_4.setVisible(false);
+        jaune_1_5.setVisible(false);
+        jaune_2_5.setVisible(false);
+        jaune_3_5.setVisible(false);
+        jaune_4_5.setVisible(false);
+        jaune_5_5.setVisible(false);
+        jaune_6_5.setVisible(false);
+        jaune_7_5.setVisible(false);
+        jaune_1_6.setVisible(false);
+        jaune_2_6.setVisible(false);
+        jaune_3_6.setVisible(false);
+        jaune_4_6.setVisible(false);
+        jaune_5_6.setVisible(false);
+        jaune_6_6.setVisible(false);
+        jaune_7_6.setVisible(false);
+        rouge_1_1.setVisible(false);
+        rouge_2_1.setVisible(false);
+        rouge_3_1.setVisible(false);
+        rouge_4_1.setVisible(false);
+        rouge_5_1.setVisible(false);
+        rouge_6_1.setVisible(false);
+        rouge_7_1.setVisible(false);
+        rouge_1_2.setVisible(false);
+        rouge_2_2.setVisible(false);
+        rouge_3_2.setVisible(false);
+        rouge_4_2.setVisible(false);
+        rouge_5_2.setVisible(false);
+        rouge_6_2.setVisible(false);
+        rouge_7_2.setVisible(false);
+        rouge_1_3.setVisible(false);
+        rouge_2_3.setVisible(false);
+        rouge_3_3.setVisible(false);
+        rouge_4_3.setVisible(false);
+        rouge_5_3.setVisible(false);
+        rouge_6_3.setVisible(false);
+        rouge_7_3.setVisible(false);
+        rouge_1_4.setVisible(false);
+        rouge_2_4.setVisible(false);
+        rouge_3_4.setVisible(false);
+        rouge_4_4.setVisible(false);
+        rouge_5_4.setVisible(false);
+        rouge_6_4.setVisible(false);
+        rouge_7_4.setVisible(false);
+        rouge_1_5.setVisible(false);
+        rouge_2_5.setVisible(false);
+        rouge_3_5.setVisible(false);
+        rouge_4_5.setVisible(false);
+        rouge_5_5.setVisible(false);
+        rouge_6_5.setVisible(false);
+        rouge_7_5.setVisible(false);
+        rouge_1_6.setVisible(false);
+        rouge_2_6.setVisible(false);
+        rouge_3_6.setVisible(false);
+        rouge_4_6.setVisible(false);
+        rouge_5_6.setVisible(false);
+        rouge_6_6.setVisible(false);
+        rouge_7_6.setVisible(false);
+        your_turn.setVisible(false);
+        not_your_turn.setVisible(false);
     }
 }
