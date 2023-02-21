@@ -243,9 +243,9 @@ public class GamescreenController {
                         char[][] board = client.getBoard();
                         if (board != null) {
                             int rows = 6;
-                            int columns = 7;
-                            for (int i = 0; i < rows; i++) {
-                                for (int j = 0; j < columns; j++) {
+                            int columns =7;
+                            for (int i = 0; i < board.length; i++) {
+                                for (int j = 0; j < board[i].length ; j++) {
                                     char c = board[i][j];
                                     if (c == 'R') {
                                         if (i == 0) {
