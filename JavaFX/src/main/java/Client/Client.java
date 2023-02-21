@@ -114,7 +114,11 @@ public class Client implements Runnable{
 						setCoupAdversaire(Integer.parseInt(mess.getMess()));
 					} else if (mess.getSender().equals("Game")) {
 						System.out.println(mess.getMess());
-						//Set winner in client
+						try {
+							Thread.sleep(1000);
+						} catch (InterruptedException e) {
+							throw new RuntimeException(e);
+						}
 						if(mess.getMess().equals("win")) {
 							this.winner = true;
 							this.looser = false;
@@ -158,6 +162,7 @@ public class Client implements Runnable{
 		this.startPlayer = -1;
 		this.winner = false;
 		this.looser = false;
+		this.board = null;
 	}
 
 	public boolean isInGame() {
