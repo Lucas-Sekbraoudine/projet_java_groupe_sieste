@@ -11,6 +11,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -29,6 +31,9 @@ public class ConnexionController {
     @FXML
     public Hyperlink inscription;
 
+    @FXML
+    public Text invalidCredentials;
+
     LoadScene loadScene = new LoadScene();
 
 
@@ -40,13 +45,21 @@ public class ConnexionController {
     public TextField handleConnexionPress(ActionEvent event) throws NoSuchAlgorithmException, InvalidKeySpecException, IOException {
         UserModel userModel = new UserModel();
         userModel.init();
-        AtomicBoolean success = new AtomicBoolean(true);
-        userModel.loginUser(userName.getText(), passWord.getText());
-        Client client = new Client("127.0.0.1", 3060);
-        Thread threadClient = new Thread(client);
-        threadClient.start();
-        PlayersearchController playersearchController = new PlayersearchController(client);
-        loadScene.loadScene("/fxml/Playersearch.fxml", inscription, playersearchController, 600, 400);
+
+        String[] isConnected = userModel.loginUser(userName.getText(), passWord.getText());
+
+        if(isConnected[0].equals("true")){
+            Client client = new Client("127.0.0.1", 3060);
+            Thread threadClient = new Thread(client);
+            threadClient.start();
+            PlayersearchController playersearchController = new PlayersearchController(client);
+            loadScene.loadScene("/fxml/Playersearch.fxml", inscription, playersearchController, 600, 400);
+        } else if(isConnected[0].equals("false")){
+            userName.setStyle("-fx-text-box-border: #B22222; -fx-focus-color: #B22222;");
+            passWord.setStyle("-fx-text-box-border: #B22222; -fx-focus-color: #B22222;");
+            invalidCredentials.setVisible(true);
+            invalidCredentials.setFill(Color.rgb(174,34,34));
+        }
 
         return userName;
     }

@@ -50,7 +50,7 @@ public class InscriptionController {
     @FXML
     public void handleInscriptionPress() throws NoSuchAlgorithmException, InvalidKeySpecException {
         try{
-            User user = new User(firstName.getText(), lastName.getText(), userName.getText(), HashPwd.hashPassword(passWord.getText(), "123"));
+            User user = new User(firstName.getText(), lastName.getText(), userName.getText(), HashPwd.hashPassword(passWord.getText(), "123"), false);
             userModel.init();
             userModel.createUser(user);
             userModel.readAllUser();

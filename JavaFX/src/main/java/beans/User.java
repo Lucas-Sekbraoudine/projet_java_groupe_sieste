@@ -11,6 +11,16 @@ public class User {
     private String passWord;
     private String saltPassWord;
 
+    private Boolean isConnected = false;
+
+    public Boolean getConnected() {
+        return isConnected;
+    }
+
+    public void setConnected(Boolean connected) {
+        isConnected = connected;
+    }
+
     public String getFirstName() {
         return firstName;
     }
@@ -51,11 +61,12 @@ public class User {
         this.id = id;
     }
 
-    public User(String firstName, String lastName, String userName, String passWord) {
+    public User(String firstName, String lastName, String userName, String passWord, Boolean isConnected) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
         this.passWord = passWord;
+        this.isConnected = isConnected;
     }
     public User(){
 

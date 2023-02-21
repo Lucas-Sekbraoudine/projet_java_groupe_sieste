@@ -51,18 +51,20 @@ public class UserModel {
         return  userList;
     }
 
-    public void loginUser(String userName, String passWord) throws NoSuchAlgorithmException, InvalidKeySpecException {
+    public String[] loginUser(String userName, String passWord) throws NoSuchAlgorithmException, InvalidKeySpecException {
         BasicDBObject userNameId = new BasicDBObject();
         userNameId.put("userName", userName);
-
         FindIterable<User> cursor = userCollection.find(userNameId);
+        final String[] isConnected = {"false"};
         cursor.iterator().forEachRemaining(name-> {
             try {
                 if (name.getUserName().compareTo(userName) == 0 && name.getPassWord().compareTo(HashPwd.hashPassword(passWord, "123")) == 0){
                     System.out.println("Vous êtes connecté !!!");
+                    isConnected[0] = String.valueOf(true);
                 }
                 else{
                     System.out.println("Utilisateur ou mot de passe incorrect !!!");
+                    isConnected[0] = String.valueOf(false);
                 }
 
             } catch (NoSuchAlgorithmException e) {
@@ -70,6 +72,13 @@ public class UserModel {
             } catch (InvalidKeySpecException e) {
                 throw new RuntimeException(e);
             }
+
         });
+        for (int i = 0; i < 1; i++){
+            System.out.println(isConnected[i]);
+        }
+
+        return isConnected;
     }
 }
+
