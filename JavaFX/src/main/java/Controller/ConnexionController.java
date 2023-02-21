@@ -37,7 +37,6 @@ public class ConnexionController {
     LoadScene loadScene = new LoadScene();
 
 
-
     public ConnexionController() throws IOException {
     }
 
