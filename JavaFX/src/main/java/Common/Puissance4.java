@@ -145,4 +145,13 @@ public class Puissance4 {
         return board;
     }
 
+    public void reset() {
+        for (int i = 0; i < ROWS; i++) {
+            for (int j = 0; j < COLUMNS; j++) {
+                board[i][j] = EMPTY_SLOT;
+            }
+        }
+        currentPlayer = RED_TOKEN;
+    }
+
 }

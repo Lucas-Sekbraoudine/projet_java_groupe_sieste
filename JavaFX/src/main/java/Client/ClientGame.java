@@ -73,5 +73,6 @@ public class ClientGame implements Runnable{
                 puissance4.switchPlayer();
             }
         }
+        //puissance4.reset();
     }
 }

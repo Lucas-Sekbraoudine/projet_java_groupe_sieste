@@ -236,7 +236,7 @@ public class GamescreenController {
                     }
                     winner.setVisible(client.getWinner());
                     looser.setVisible(client.getLooser());
-                    new_game.setVisible(client.getWinner() || client.getLooser());
+                    //new_game.setVisible(client.getWinner() || client.getLooser());
                     exit.setVisible(!client.isInGame());
                     if (client.getMessage() != null && client.isInGame()){
                         messageArea.appendText("\nAdversarie: "+client.getMessage() );
