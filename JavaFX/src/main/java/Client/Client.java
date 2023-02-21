@@ -54,12 +54,6 @@ public class Client implements Runnable{
 		System.exit(0);
 	}
 
-	public void messageReceived() throws IOException, ClassNotFoundException {
-			Message mess = null;
-		 mess = (Message) in.readObject();
-		 System.out.println(mess);
-	}
-
 	public void sendMessage(Message mess) throws IOException {
 		this.out.flush();
 		this.out.writeObject(mess);
@@ -112,7 +106,11 @@ public class Client implements Runnable{
 					System.out.println(mess.toString());
 					if(mess.getSender().equals("Play")) {
 						setCoupAdversaire(Integer.parseInt(mess.getMess()));
-					} else if (mess.getSender().equals("Game")) {
+					}
+					else if (mess.getSender().equals("message")){
+						System.out.println(mess.getMess());
+					}
+					else if (mess.getSender().equals("Game")) {
 						System.out.println(mess.getMess());
 						try {
 							Thread.sleep(1000);
