@@ -10,6 +10,8 @@ import javafx.scene.control.Hyperlink;
 
 import java.io.IOException;
 
+import static java.lang.System.exit;
+
 public class PlayersearchController {
 
     Client client;
@@ -32,6 +34,12 @@ public class PlayersearchController {
         }
         GamescreenController gamescreenController = new GamescreenController(client);
         loadScene.loadScene("/fxml/Gamescreen.fxml", playersearch, gamescreenController, 800, 400);
+    }
+
+    @FXML
+    public void handleDisconnect() throws IOException {
+        client.disconnectedServer();
+        exit(0);
     }
 
 
