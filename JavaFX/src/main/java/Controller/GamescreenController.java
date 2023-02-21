@@ -15,7 +15,11 @@ import javafx.scene.text.Text;
 import java.io.IOException;
 import java.time.format.TextStyle;
 
+import static java.lang.System.exit;
+
 public class GamescreenController {
+    @FXML
+    public Button exit;
     @FXML
     public Button new_game;
     @FXML
@@ -233,6 +237,7 @@ public class GamescreenController {
                     winner.setVisible(client.getWinner());
                     looser.setVisible(client.getLooser());
                     new_game.setVisible(client.getWinner() || client.getLooser());
+                    exit.setVisible(!client.isInGame());
                 }
             });
             t.start();
@@ -632,5 +637,15 @@ public class GamescreenController {
         rouge_7_6.setVisible(false);
         your_turn.setVisible(false);
         not_your_turn.setVisible(false);
+    }
+
+    @FXML
+    public void handleExit(){
+        try {
+            client.disconnectedServer();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        exit(0);
     }
 }
