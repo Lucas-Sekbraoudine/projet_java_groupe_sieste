@@ -238,6 +238,10 @@ public class GamescreenController {
                     looser.setVisible(client.getLooser());
                     new_game.setVisible(client.getWinner() || client.getLooser());
                     exit.setVisible(!client.isInGame());
+                    if (client.getMessage() != null && client.isInGame()){
+                        messageArea.appendText("\nAdversarie: "+client.getMessage() );
+                        client.setMessage(null);
+                    }
                 }
             });
             t.start();
@@ -467,13 +471,6 @@ public class GamescreenController {
             });
             t.start();
         });
-
-        Platform.runLater(() ->{
-            Thread t3 = new Thread(() ->{
-
-            });
-            t3.start();
-        });
     }
 
     @FXML
@@ -537,13 +534,14 @@ public class GamescreenController {
 
     @FXML
     public void handleSendMessage() throws IOException {
-        Message message = new Message("message", messageSender.getText());
+        String text = messageSender.getText();
+        Message message = new Message("message", text);
         try {
             client.sendMessage(message);
             if (messageArea.getText().equals(""))
-                messageArea.appendText(messageSender.getText());
+                messageArea.appendText(text);
             else{
-                messageArea.appendText("\n" + messageSender.getText());
+                messageArea.appendText("\n" + text);
             }
         } catch (IOException e) {
             throw new RuntimeException(e);

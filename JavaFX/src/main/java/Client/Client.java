@@ -28,6 +28,8 @@ public class Client implements Runnable{
 	private int coupAdversaire = -1;
 	private int coupJoueur = -1;
 
+	private String message = null;
+
 	public void setView(AccueilController view) {
 		this.view = view;
 	}
@@ -108,7 +110,8 @@ public class Client implements Runnable{
 						setCoupAdversaire(Integer.parseInt(mess.getMess()));
 					}
 					else if (mess.getSender().equals("message")){
-						System.out.println(mess.getMess());
+						//System.out.println("Adversaire: "+mess.getMess());
+						setMessage(mess.getMess());
 					}
 					else if (mess.getSender().equals("Game")) {
 						System.out.println(mess.getMess());
@@ -234,6 +237,14 @@ public class Client implements Runnable{
 
 	public boolean getLooser() {
 		return looser;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+	public String getMessage() {
+		return message;
 	}
 }
 

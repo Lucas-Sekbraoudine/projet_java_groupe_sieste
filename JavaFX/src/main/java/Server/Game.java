@@ -36,6 +36,18 @@ public class Game implements Runnable{
             //Tant que la partie n'est pas finie
             while (!puissance4.isFinished()) {
                 Thread.sleep(100);
+                // Gestion chat
+                if (player1.getMessage() != null) {
+                    player2.sendMessage(new Message("message", player1.getMessage()));
+                    System.out.println("Message envoyé par " + player1.getId() + " : " + player1.getMessage() + "");
+                    player1.setMessage(null);
+                }
+                if (player2.getMessage() != null) {
+                    player1.sendMessage(new Message("message", player2.getMessage()));
+                    System.out.println("Message envoyé par " + player2.getId() + " : " + player2.getMessage() + "");
+                    player2.setMessage(null);
+                }
+
                 //Si c'est le tour du joueur 1
                 if (currentPlayer == player1.getId()){
                     //Attendre que le joueur 1 joue

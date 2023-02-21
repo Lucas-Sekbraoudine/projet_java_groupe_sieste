@@ -18,6 +18,7 @@ public class ConnectedClient implements Runnable{
 	private ObjectInputStream in;
 	private int Move = -1;
 	private boolean isSearchingGame = false;
+	private String message = null;
 
 	public ConnectedClient(Server server, Socket socket) throws IOException {
 		this.server = server;
@@ -58,6 +59,9 @@ public class ConnectedClient implements Runnable{
 					else if (mess.getSender().equals("disconnect")) {
 						server.disconnectedClient(this);
 						isActive = false;
+					}else if(mess.getSender().equals("message")){
+						this.setMessage(mess.getMess());
+						System.out.println("Client " + this.getId() + " send message : " + mess.getMess());
 					} else {
 						System.out.println("Message vide");
 						System.out.println(mess.toString());
@@ -104,6 +108,14 @@ public class ConnectedClient implements Runnable{
 
 	public void setMove(int move) {
 		Move = move;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+	public String getMessage() {
+		return message;
 	}
 
 }
